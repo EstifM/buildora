@@ -1,0 +1,263 @@
+{
+  "common": {
+    "appName": "Buildora",
+    "appTagline": "ATS-ready resumes for Ethiopian job seekers",
+    "currency": "birr"
+  },
+  "seo": {
+    "home": {
+      "title": "Buildora – Get your resume past the ATS",
+      "description": "Buildora tailors your resume to any job post with the right ATS keywords. Free keyword check, AI rewrite, PDF and Word downloads. Pay with Telebirr."
+    },
+    "builder": {
+      "title": "Build your ATS-friendly resume | Buildora",
+      "description": "Paste your resume and a job description to get an ATS match score, the missing keywords and an improved resume in seconds. Free to try."
+    },
+    "ogImageAlt": "Buildora logo",
+    "offerFree": "Free keyword check and ATS score"
+  },
+  "language": {
+    "switcherLabel": "Choose language",
+    "en": "English",
+    "am": "አማርኛ"
+  },
+  "nav": {
+    "home": "Home",
+    "builder": "Builder",
+    "mainLabel": "Main navigation"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Free to try",
+      "title": "Get your resume past the ATS and in front of a recruiter",
+      "description": "Upload your resume, paste the job description, and we'll tailor it with the right keywords. See your improvement score instantly.",
+      "cta": "Start Building",
+      "secondaryCta": "See pricing"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "Three simple steps. No design skills needed.",
+      "step1": {
+        "title": "Add your resume",
+        "description": "Upload a file or paste the text of your current resume."
+      },
+      "step2": {
+        "title": "Paste the job description",
+        "description": "Copy the job post you want to apply for and paste it in."
+      },
+      "step3": {
+        "title": "Get your improved resume",
+        "description": "We match keywords, show your score, and give you a cleaner version."
+      }
+    },
+    "pricing": {
+      "title": "Simple pricing",
+      "subtitle": "The keyword check is free. Pay only for the full AI rewrite.",
+      "payWith": "Pay with Telebirr",
+      "popular": "Best value",
+      "pricePer": "/ {period}",
+      "daily": {
+        "name": "Daily pass",
+        "period": "day",
+        "description": "Perfect for one urgent application.",
+        "feature1": "Full AI resume rewrite",
+        "feature2": "Cover letter for each job",
+        "feature3": "Unlimited downloads for 24 hours"
+      },
+      "weekly": {
+        "name": "Weekly pass",
+        "period": "week",
+        "description": "Best when you're applying to many jobs.",
+        "feature1": "Everything in the Daily pass",
+        "feature2": "7 days of unlimited rewrites",
+        "feature3": "Save over 40% vs. daily"
+      }
+    },
+    "footer": {
+      "copyright": "© {year} Buildora.",
+      "privacy": "Your resume is only used to build your result.",
+      "privacyLink": "Privacy Policy",
+      "termsLink": "Terms of Service",
+      "legalNav": "Legal"
+    }
+  },
+  "builder": {
+    "title": "Build your resume",
+    "subtitle": "Add your resume and the job description, then press Build.",
+    "resume": {
+      "heading": "Your resume",
+      "stepLabel": "Step 1",
+      "uploadLabel": "Upload a file",
+      "uploadHint": "PDF, DOCX or TXT · up to {maxMb} MB",
+      "chooseFile": "Choose file",
+      "removeFile": "Remove",
+      "selectedFile": "Selected: {fileName}",
+      "orPaste": "or paste the text",
+      "pasteLabel": "Resume text",
+      "pastePlaceholder": "Paste your resume here…"
+    },
+    "jobDescription": {
+      "heading": "Job description",
+      "stepLabel": "Step 2",
+      "pasteLabel": "Job description text",
+      "pastePlaceholder": "Paste the job post you're applying for…"
+    },
+    "charCount": "{count} / {max} characters",
+    "buttons": {
+      "free": "Free Build",
+      "useAi": "Use AI Builder",
+      "buildWithAi": "Build with AI",
+      "aiBadge": "Premium"
+    },
+    "buildHint": "Add your resume and a job description to continue.",
+    "pasteTextForFree": "File reading is coming soon. Please paste your resume text to build.",
+    "aiInstructions": {
+      "label": "Extra instructions for the AI (optional)",
+      "placeholder": "Focus more on leadership experience, make the summary more confident, etc.",
+      "hint": "Tell the AI what to emphasize. Leave it blank to let the AI decide."
+    },
+    "result": {
+      "heading": "Result",
+      "placeholder": "Result will appear here",
+      "previewTitleFree": "Free build preview",
+      "previewTitleAi": "AI build preview",
+      "watermark": "Preview – Unlock to download",
+      "protectedNote": "This is a protected preview. Unlock to download your full resume."
+    },
+    "errors": {
+      "fileType": "Please choose a PDF, DOCX or TXT file.",
+      "fileTooLarge": "This file is too large. The limit is {maxMb} MB.",
+      "tooLong": "This text is too long. Please keep it under {max} characters."
+    },
+    "score": {
+      "title": "ATS match score",
+      "before": "Before",
+      "after": "After",
+      "outOf": "out of 100",
+      "improvement": "+{points} points",
+      "noImprovement": "Your resume already matches this job well.",
+      "lowKeywords": "This job description is short, so the score may be less accurate. Paste the full job post for better results."
+    },
+    "preview": {
+      "toggleLabel": "Resume version",
+      "improved": "Improved",
+      "original": "Original"
+    },
+    "keywords": {
+      "addedTitle": "Added to your Skills",
+      "addedHint": "Only keep skills you really have. Tap a keyword to remove or restore it.",
+      "removeLabel": "Remove {keyword} from your resume",
+      "restoreLabel": "Add {keyword} back to your resume",
+      "matchedTitle": "Already in your resume",
+      "suggestionsTitle": "Also mentioned in the job post",
+      "suggestionsHint": "Mention these in your experience only if they apply to you."
+    },
+    "changes": {
+      "title": "What we changed ({count})",
+      "none": "No changes were needed.",
+      "createdSkillsSection": "Added a Skills section",
+      "addedSkills": "Added {count} job keywords to your Skills section",
+      "createdSummary": "Added a summary highlighting {keywords}",
+      "improvedSummary": "Strengthened your summary with {keywords}",
+      "strengthenedBullet": "Stronger start: “{before}” → “{after}”",
+      "normalizedTerm": "Changed “{from}” to “{to}” to match the job post"
+    },
+    "download": {
+      "title": "Download your resume",
+      "lockedHint": "Enter your email to unlock the PDF and Word downloads.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "unlock": "Unlock download",
+      "invalidEmail": "Please enter a valid email address.",
+      "unlockedFor": "Unlocked for {email}",
+      "changeEmail": "Use a different email",
+      "locked": "Locked",
+      "pdf": "Download PDF",
+      "docx": "Download DOCX",
+      "preparing": "Preparing…",
+      "failed": "We couldn't create your file. Please try again.",
+      "pdfCharsNote": "Some characters (for example Amharic letters) can't be shown in the PDF yet. Use the DOCX download for the full text.",
+      "fileName": "resume",
+      "documentTitle": "{name} – Resume",
+      "emailNotice": "We save your email so we can contact you about your resume."
+    },
+    "ai": {
+      "loading": "Rewriting your resume with AI…",
+      "loadingHint": "This can take up to 30 seconds. Please keep this page open.",
+      "honestyNote": "The AI only uses facts from your original resume. Please read the result carefully before you use it.",
+      "truncated": "Your resume is long, so the AI result may be cut short at the end. Check that nothing important is missing.",
+      "scoreNote": "The AI only lists skills you already have, so your keyword score may not go up. Try Free Build to see which job keywords are missing.",
+      "rebuild": "Rebuild with AI",
+      "retry": "Try again",
+      "renewAccess": "Renew access",
+      "errorTitle": "The AI Builder couldn't finish"
+    },
+    "aiStyles": {
+      "groupLabel": "AI writing style",
+      "chatgpt": "ChatGPT style: natural and conversational",
+      "claude": "Claude style: structured, professional and detailed",
+      "gemini": "Gemini style: concise and keyword-focused"
+    }
+  },
+  "atsTemplates": {
+    "skillsHeading": "Skills",
+    "summaryHeading": "Professional Summary",
+    "summaryAddition": "Skilled in {skills}.",
+    "summaryNew": "Professional with hands-on experience in {skills}.",
+    "listSeparator": ", ",
+    "listLastSeparator": " and "
+  },
+  "payment": {
+    "title": "Unlock unlimited access",
+    "close": "Close",
+    "detailsTitle": "Payment Details",
+    "telebirrNumber": "Telebirr Number",
+    "accountName": "Account Name",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "choosePlan": "Choose your plan",
+    "planDaily": "{price} ETB – 1 Day Unlimited",
+    "planWeekly": "{price} ETB – 7 Days Unlimited",
+    "selectedAmount": "Amount to send",
+    "amountValue": "{price} ETB",
+    "instructions": "Send the exact amount with Telebirr to the number above, then confirm your payment.",
+    "confirmTitle": "Confirm Your Payment",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "you@example.com",
+    "transactionLabel": "Payment Reference / Transaction Number",
+    "transactionPlaceholder": "e.g. BKR3X5H6GZ",
+    "transactionHelp": "Enter the reference/transaction number from your payment receipt",
+    "confirmButton": "Confirm Payment",
+    "submitting": "Sending…",
+    "waitingTitle": "Waiting for confirmation…",
+    "waitingBody": "This usually takes less than a minute. Keep this window open — it will update by itself.",
+    "waitingReference": "Transaction number: {reference}",
+    "approvedTitle": "Payment confirmed!",
+    "approvedBody": "You have unlimited access until {date}.",
+    "startAi": "Start AI Builder",
+    "rejectedTitle": "Payment not approved",
+    "rejectedBody": "We couldn't confirm this payment. Please check the transaction number on your receipt. If you already paid, keep your receipt.",
+    "expiredTitle": "Your access has ended",
+    "expiredBody": "Your unlimited access has expired. Choose a plan to continue.",
+    "newPayment": "Try a new payment",
+    "statusActive": "Unlimited access active until {date}",
+    "statusPending": "Payment waiting for confirmation",
+    "errors": {
+      "invalid_request": "Something was wrong with the request. Please try again.",
+      "invalid_email": "Please enter a valid email address.",
+      "invalid_plan": "Please choose a plan.",
+      "invalid_transaction_id": "Please enter a valid transaction number ({min}–{max} letters or numbers).",
+      "duplicate_transaction": "This transaction number has already been used. Each payment can only be used once.",
+      "rate_limited": "Too many attempts. Please wait a minute and try again.",
+      "unauthorized": "We couldn't find your payment. Please make a new payment.",
+      "not_found": "We couldn't find your payment. Please make a new payment.",
+      "server_error": "Something went wrong on our side. Please try again.",
+      "network": "We couldn't reach the server. Check your connection and try again.",
+      "payment_required": "Your unlimited access is not active. Please make a payment to continue.",
+      "input_too_long": "Your text is too long. Please shorten it and try again.",
+      "ai_unavailable": "The AI Builder is busy right now. Please try again in a moment, or use Free Build.",
+      "daily_limit": "You've reached today's AI Builder limit. Please try again tomorrow, or use Free Build."
+    },
+    "emailNotice": "We save your email to confirm your payment and contact you about your resume."
+  }
+}

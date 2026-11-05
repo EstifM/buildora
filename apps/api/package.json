@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest run",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.0.0",
+    "@types/node": "^26.6.4",
+    "typescript": "^5.5.2",
+    "vitest": "~4.1.0",
+    "wrangler": "^4.147.0"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "@resume-builder/shared": "^0.0.1",
+    "grammy": "^1.46.0",
+    "hono": "^4.13.13"
+  }
+}

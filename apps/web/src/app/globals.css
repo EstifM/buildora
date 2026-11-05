@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Amharic pages also load Noto Sans Ethiopic (see RootShell); Latin text stays in Geist. */
+  --font-sans: var(--font-geist-sans), var(--font-noto-ethiopic, ui-sans-serif), sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-slate-50);
+  color: var(--color-slate-900);
+}

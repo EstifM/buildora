@@ -1,0 +1,263 @@
+{
+  "common": {
+    "appName": "Buildora",
+    "appTagline": "ለኢትዮጵያውያን ሥራ ፈላጊዎች ለATS ዝግጁ የሆኑ ሲቪዎች",
+    "currency": "ብር"
+  },
+  "seo": {
+    "home": {
+      "title": "Buildora – ሲቪዎ ATSን እንዲያልፍ ያድርጉ",
+      "description": "Buildora ሲቪዎን በትክክለኛ የATS ቁልፍ ቃላት ለማንኛውም የሥራ ማስታወቂያ ያስተካክላል። ነጻ የቁልፍ ቃላት ፍተሻ፣ የAI ማሻሻያ፣ የPDF እና Word ማውረጃ። በቴሌብር ይክፈሉ።"
+    },
+    "builder": {
+      "title": "ለATS ተስማሚ ሲቪ ያዘጋጁ | Buildora",
+      "description": "ሲቪዎን እና የሥራ መግለጫውን ይለጥፉ፤ የATS ተዛማጅነት ውጤት፣ የጎደሉ ቁልፍ ቃላትን እና የተሻሻለ ሲቪ በሰከንዶች ያግኙ። በነጻ ይሞክሩ።"
+    },
+    "ogImageAlt": "የBuildora አርማ",
+    "offerFree": "ነጻ የቁልፍ ቃላት ፍተሻ እና የATS ውጤት"
+  },
+  "language": {
+    "switcherLabel": "ቋንቋ ይምረጡ",
+    "en": "English",
+    "am": "አማርኛ"
+  },
+  "nav": {
+    "home": "መነሻ",
+    "builder": "ሲቪ አዘጋጅ",
+    "mainLabel": "ዋና ማውጫ"
+  },
+  "landing": {
+    "hero": {
+      "badge": "በነጻ ይሞክሩ",
+      "title": "ሲቪዎ ATSን አልፎ ቀጣሪ ዘንድ እንዲደርስ ያድርጉ",
+      "description": "ሲቪዎን ይጫኑ፣ የሥራ መግለጫውን ይለጥፉ፤ እኛም ትክክለኛዎቹን ቁልፍ ቃላት ተጠቅመን ለሥራው እናስተካክለዋለን። የመሻሻል ውጤትዎን ወዲያውኑ ይመልከቱ።",
+      "cta": "ማዘጋጀት ይጀምሩ",
+      "secondaryCta": "ዋጋዎችን ይመልከቱ"
+    },
+    "howItWorks": {
+      "title": "እንዴት ይሠራል",
+      "subtitle": "ሦስት ቀላል ደረጃዎች። የዲዛይን ችሎታ አያስፈልግም።",
+      "step1": {
+        "title": "ሲቪዎን ያስገቡ",
+        "description": "ፋይል ይጫኑ ወይም የአሁኑን ሲቪዎን ጽሑፍ ይለጥፉ።"
+      },
+      "step2": {
+        "title": "የሥራ መግለጫውን ይለጥፉ",
+        "description": "ማመልከት የሚፈልጉትን የሥራ ማስታወቂያ ገልብጠው እዚህ ይለጥፉ።"
+      },
+      "step3": {
+        "title": "የተሻሻለውን ሲቪዎን ያግኙ",
+        "description": "ቁልፍ ቃላትን እናዛምዳለን፣ ውጤትዎን እናሳያለን፣ የተሻለ ቅጂም እንሰጥዎታለን።"
+      }
+    },
+    "pricing": {
+      "title": "ቀላል ዋጋ",
+      "subtitle": "የቁልፍ ቃላት ፍተሻው ነጻ ነው። የሚከፍሉት ለሙሉ የAI ማሻሻያ ብቻ ነው።",
+      "payWith": "በቴሌብር ይክፈሉ",
+      "popular": "ምርጥ ዋጋ",
+      "pricePer": "/ {period}",
+      "daily": {
+        "name": "የአንድ ቀን ጥቅል",
+        "period": "ቀን",
+        "description": "ለአንድ አስቸኳይ ማመልከቻ ተስማሚ።",
+        "feature1": "ሙሉ የሲቪ ማሻሻያ በAI",
+        "feature2": "ለእያንዳንዱ ሥራ የማመልከቻ ደብዳቤ",
+        "feature3": "ለ24 ሰዓት ያልተገደበ ማውረድ"
+      },
+      "weekly": {
+        "name": "የሳምንት ጥቅል",
+        "period": "ሳምንት",
+        "description": "ለብዙ ሥራዎች ሲያመለክቱ ምርጡ ምርጫ።",
+        "feature1": "በአንድ ቀን ጥቅል ውስጥ ያሉት ሁሉ",
+        "feature2": "ለ7 ቀናት ያልተገደበ ማሻሻያ",
+        "feature3": "ከዕለታዊው ጥቅል ከ40% በላይ ይቆጥቡ"
+      }
+    },
+    "footer": {
+      "copyright": "© {year} Buildora።",
+      "privacy": "ሲቪዎ የሚያገለግለው ውጤትዎን ለማዘጋጀት ብቻ ነው።",
+      "privacyLink": "የግላዊነት ፖሊሲ",
+      "termsLink": "የአገልግሎት ውል",
+      "legalNav": "ሕጋዊ መረጃ"
+    }
+  },
+  "builder": {
+    "title": "ሲቪዎን ያዘጋጁ",
+    "subtitle": "ሲቪዎን እና የሥራ መግለጫውን ያስገቡ፣ ከዚያ የማዘጋጃ ቁልፉን ይጫኑ።",
+    "resume": {
+      "heading": "የእርስዎ ሲቪ",
+      "stepLabel": "ደረጃ 1",
+      "uploadLabel": "ፋይል ይጫኑ",
+      "uploadHint": "PDF፣ DOCX ወይም TXT · እስከ {maxMb} MB",
+      "chooseFile": "ፋይል ይምረጡ",
+      "removeFile": "አስወግድ",
+      "selectedFile": "የተመረጠው፦ {fileName}",
+      "orPaste": "ወይም ጽሑፉን ይለጥፉ",
+      "pasteLabel": "የሲቪ ጽሑፍ",
+      "pastePlaceholder": "ሲቪዎን እዚህ ይለጥፉ…"
+    },
+    "jobDescription": {
+      "heading": "የሥራ መግለጫ",
+      "stepLabel": "ደረጃ 2",
+      "pasteLabel": "የሥራ መግለጫ ጽሑፍ",
+      "pastePlaceholder": "የሚያመለክቱበትን የሥራ ማስታወቂያ እዚህ ይለጥፉ…"
+    },
+    "charCount": "{count} / {max} ፊደላት",
+    "buttons": {
+      "free": "በነጻ ያዘጋጁ",
+      "useAi": "የAI አዘጋጁን ይጠቀሙ",
+      "buildWithAi": "በAI ያዘጋጁ",
+      "aiBadge": "ፕሪሚየም"
+    },
+    "buildHint": "ለመቀጠል ሲቪዎን እና የሥራ መግለጫ ያስገቡ።",
+    "pasteTextForFree": "ፋይል የማንበብ አገልግሎት በቅርቡ ይጀመራል። ለማዘጋጀት እባክዎ የሲቪዎን ጽሑፍ ይለጥፉ።",
+    "aiInstructions": {
+      "label": "ለAI ተጨማሪ መመሪያዎች (አማራጭ)",
+      "placeholder": "በአመራር ልምዴ ላይ የበለጠ አተኩር፣ ማጠቃለያውን በበለጠ በራስ መተማመን ጻፈው፣ ወዘተ.",
+      "hint": "AI በምን ላይ እንዲያተኩር ይንገሩት። ባዶ ከተዉት AI ራሱ ይወስናል።"
+    },
+    "result": {
+      "heading": "ውጤት",
+      "placeholder": "ውጤቱ እዚህ ይታያል",
+      "previewTitleFree": "የነጻ ዝግጅት ቅድመ እይታ",
+      "previewTitleAi": "የAI ዝግጅት ቅድመ እይታ",
+      "watermark": "ቅድመ እይታ – ለማውረድ ይክፈቱ",
+      "protectedNote": "ይህ የተጠበቀ ቅድመ እይታ ነው። ሙሉ ሲቪዎን ለማውረድ ይክፈቱ።"
+    },
+    "errors": {
+      "fileType": "እባክዎ PDF፣ DOCX ወይም TXT ፋይል ይምረጡ።",
+      "fileTooLarge": "ይህ ፋይል በጣም ትልቅ ነው። ገደቡ {maxMb} MB ነው።",
+      "tooLong": "ይህ ጽሑፍ በጣም ረጅም ነው። እባክዎ ከ{max} ፊደላት በታች ያድርጉት።"
+    },
+    "score": {
+      "title": "የATS ተዛማጅነት ውጤት",
+      "before": "በፊት",
+      "after": "በኋላ",
+      "outOf": "ከ100",
+      "improvement": "+{points} ነጥብ",
+      "noImprovement": "ሲቪዎ ከዚህ ሥራ ጋር አስቀድሞ በደንብ ይዛመዳል።",
+      "lowKeywords": "ይህ የሥራ መግለጫ አጭር ስለሆነ ውጤቱ ሙሉ በሙሉ ትክክል ላይሆን ይችላል። ለተሻለ ውጤት ሙሉውን የሥራ ማስታወቂያ ይለጥፉ።"
+    },
+    "preview": {
+      "toggleLabel": "የሲቪ ቅጂ",
+      "improved": "የተሻሻለ",
+      "original": "የመጀመሪያው"
+    },
+    "keywords": {
+      "addedTitle": "ወደ ክህሎቶችዎ የተጨመሩ",
+      "addedHint": "በእርግጥ ያለዎትን ክህሎቶች ብቻ ያስቀሩ። ለማስወገድ ወይም ለመመለስ ቁልፍ ቃሉን ይጫኑ።",
+      "removeLabel": "{keyword}ን ከሲቪዎ ያስወግዱ",
+      "restoreLabel": "{keyword}ን ወደ ሲቪዎ ይመልሱ",
+      "matchedTitle": "በሲቪዎ ውስጥ ቀድመው ያሉ",
+      "suggestionsTitle": "በሥራ ማስታወቂያው የተጠቀሱ ሌሎች ቃላት",
+      "suggestionsHint": "እነዚህን በልምድዎ ውስጥ ይጥቀሱ፤ የሚመለከቱዎት ከሆነ ብቻ።"
+    },
+    "changes": {
+      "title": "የቀየርናቸው ({count})",
+      "none": "ምንም ለውጥ አላስፈለገም።",
+      "createdSkillsSection": "የክህሎቶች ክፍል ተጨምሯል",
+      "addedSkills": "{count} የሥራ ቁልፍ ቃላት ወደ ክህሎቶች ክፍልዎ ተጨምረዋል",
+      "createdSummary": "{keywords}ን የሚያጎላ ማጠቃለያ ተጨምሯል",
+      "improvedSummary": "ማጠቃለያዎ በ{keywords} ተጠናክሯል",
+      "strengthenedBullet": "ጠንካራ አጀማመር፦ “{before}” → “{after}”",
+      "normalizedTerm": "ከሥራ ማስታወቂያው ጋር እንዲዛመድ “{from}” ወደ “{to}” ተቀይሯል"
+    },
+    "download": {
+      "title": "ሲቪዎን ያውርዱ",
+      "lockedHint": "የPDF እና የWord ማውረጃዎችን ለመክፈት ኢሜይልዎን ያስገቡ።",
+      "emailLabel": "የኢሜይል አድራሻ",
+      "emailPlaceholder": "you@example.com",
+      "unlock": "ማውረዱን ይክፈቱ",
+      "invalidEmail": "እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ።",
+      "unlockedFor": "ለ{email} ተከፍቷል",
+      "changeEmail": "ሌላ ኢሜይል ይጠቀሙ",
+      "locked": "ተቆልፏል",
+      "pdf": "PDF ያውርዱ",
+      "docx": "DOCX ያውርዱ",
+      "preparing": "በማዘጋጀት ላይ…",
+      "failed": "ፋይልዎን መፍጠር አልቻልንም። እባክዎ እንደገና ይሞክሩ።",
+      "pdfCharsNote": "አንዳንድ ፊደላት (ለምሳሌ የአማርኛ ፊደላት) በPDF ላይ ገና ሊታዩ አይችሉም። ሙሉውን ጽሑፍ ለማግኘት የDOCX ማውረጃውን ይጠቀሙ።",
+      "fileName": "cv",
+      "documentTitle": "{name} – ሲቪ",
+      "emailNotice": "ስለ ሲቪዎ እርስዎን ለማግኘት ኢሜይልዎን እናስቀምጣለን።"
+    },
+    "ai": {
+      "loading": "ሲቪዎን በAI እያሻሻልን ነው…",
+      "loadingHint": "ይህ እስከ 30 ሰከንድ ሊወስድ ይችላል። እባክዎ ይህን ገጽ አይዝጉት።",
+      "honestyNote": "AI የሚጠቀመው በመጀመሪያው ሲቪዎ ውስጥ ያሉ እውነታዎችን ብቻ ነው። ከመጠቀምዎ በፊት ውጤቱን በጥንቃቄ ያንብቡ።",
+      "truncated": "ሲቪዎ ረጅም ስለሆነ የAI ውጤቱ መጨረሻ ላይ ሊቆረጥ ይችላል። ምንም አስፈላጊ ነገር እንዳልጎደለ ያረጋግጡ።",
+      "scoreNote": "AI የሚዘረዝረው ያለዎትን ክህሎቶች ብቻ ስለሆነ የቁልፍ ቃላት ውጤትዎ ላይጨምር ይችላል። የትኞቹ የሥራ ቁልፍ ቃላት እንደጎደሉ ለማየት ነጻውን ዝግጅት ይሞክሩ።",
+      "rebuild": "በAI እንደገና ያዘጋጁ",
+      "retry": "እንደገና ይሞክሩ",
+      "renewAccess": "መዳረሻዎን ያድሱ",
+      "errorTitle": "የAI አዘጋጁ ሥራውን መጨረስ አልቻለም"
+    },
+    "aiStyles": {
+      "groupLabel": "የAI አጻጻፍ ስልት",
+      "chatgpt": "የChatGPT ስልት፦ ተፈጥሯዊ እና የንግግር ዓይነት",
+      "claude": "የClaude ስልት፦ የተደራጀ፣ ሙያዊ እና ዝርዝር",
+      "gemini": "የGemini ስልት፦ አጭር እና በቁልፍ ቃላት ላይ ያተኮረ"
+    }
+  },
+  "atsTemplates": {
+    "skillsHeading": "ክህሎቶች",
+    "summaryHeading": "የሙያ ማጠቃለያ",
+    "summaryAddition": "በ{skills} ክህሎት አለኝ።",
+    "summaryNew": "በ{skills} ተግባራዊ ልምድ ያለኝ ባለሙያ ነኝ።",
+    "listSeparator": "፣ ",
+    "listLastSeparator": " እና "
+  },
+  "payment": {
+    "title": "ያልተገደበ መዳረሻ ይክፈቱ",
+    "close": "ዝጋ",
+    "detailsTitle": "የክፍያ ዝርዝሮች",
+    "telebirrNumber": "የቴሌብር ቁጥር",
+    "accountName": "የአካውንት ስም",
+    "copy": "ቅዳ",
+    "copied": "ተቀድቷል!",
+    "choosePlan": "ጥቅልዎን ይምረጡ",
+    "planDaily": "{price} ብር – ለ1 ቀን ያልተገደበ",
+    "planWeekly": "{price} ብር – ለ7 ቀናት ያልተገደበ",
+    "selectedAmount": "የሚላከው መጠን",
+    "amountValue": "{price} ብር",
+    "instructions": "ትክክለኛውን መጠን በቴሌብር ከላይ ወዳለው ቁጥር ይላኩ፤ ከዚያ ክፍያዎን ያረጋግጡ።",
+    "confirmTitle": "ክፍያዎን ያረጋግጡ",
+    "emailLabel": "ኢሜይልዎ",
+    "emailPlaceholder": "you@example.com",
+    "transactionLabel": "የክፍያ ማጣቀሻ / የግብይት ቁጥር",
+    "transactionPlaceholder": "ለምሳሌ BKR3X5H6GZ",
+    "transactionHelp": "በክፍያ ደረሰኝዎ ላይ ያለውን የማጣቀሻ/የግብይት ቁጥር ያስገቡ",
+    "confirmButton": "ክፍያውን ያረጋግጡ",
+    "submitting": "በመላክ ላይ…",
+    "waitingTitle": "ማረጋገጫ በመጠበቅ ላይ…",
+    "waitingBody": "ይህ አብዛኛውን ጊዜ ከአንድ ደቂቃ ያነሰ ጊዜ ይወስዳል። ይህን መስኮት ክፍት ይተዉት — በራሱ ይዘምናል።",
+    "waitingReference": "የግብይት ቁጥር፦ {reference}",
+    "approvedTitle": "ክፍያው ተረጋግጧል!",
+    "approvedBody": "እስከ {date} ድረስ ያልተገደበ መዳረሻ አለዎት።",
+    "startAi": "የAI አዘጋጁን ይጀምሩ",
+    "rejectedTitle": "ክፍያው አልጸደቀም",
+    "rejectedBody": "ይህን ክፍያ ማረጋገጥ አልቻልንም። እባክዎ በደረሰኝዎ ላይ ያለውን የግብይት ቁጥር ያረጋግጡ። አስቀድመው ከፍለው ከሆነ ደረሰኝዎን ያስቀምጡ።",
+    "expiredTitle": "መዳረሻዎ አብቅቷል",
+    "expiredBody": "ያልተገደበ መዳረሻዎ ጊዜው አልፏል። ለመቀጠል ጥቅል ይምረጡ።",
+    "newPayment": "አዲስ ክፍያ ይሞክሩ",
+    "statusActive": "ያልተገደበ መዳረሻ እስከ {date} ድረስ ንቁ ነው",
+    "statusPending": "ክፍያው ማረጋገጫ እየጠበቀ ነው",
+    "errors": {
+      "invalid_request": "በጥያቄው ላይ ችግር ነበር። እባክዎ እንደገና ይሞክሩ።",
+      "invalid_email": "እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ።",
+      "invalid_plan": "እባክዎ ጥቅል ይምረጡ።",
+      "invalid_transaction_id": "እባክዎ ትክክለኛ የግብይት ቁጥር ያስገቡ ({min}–{max} ፊደላት ወይም ቁጥሮች)።",
+      "duplicate_transaction": "ይህ የግብይት ቁጥር አስቀድሞ ጥቅም ላይ ውሏል። እያንዳንዱ ክፍያ የሚያገለግለው አንድ ጊዜ ብቻ ነው።",
+      "rate_limited": "በጣም ብዙ ሙከራዎች ተደርገዋል። እባክዎ አንድ ደቂቃ ጠብቀው እንደገና ይሞክሩ።",
+      "unauthorized": "ክፍያዎን ማግኘት አልቻልንም። እባክዎ አዲስ ክፍያ ይፈጽሙ።",
+      "not_found": "ክፍያዎን ማግኘት አልቻልንም። እባክዎ አዲስ ክፍያ ይፈጽሙ።",
+      "server_error": "በእኛ በኩል ችግር ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።",
+      "network": "ከሰርቨሩ ጋር መገናኘት አልቻልንም። ኢንተርኔትዎን አረጋግጠው እንደገና ይሞክሩ።",
+      "payment_required": "ያልተገደበ መዳረሻዎ ንቁ አይደለም። ለመቀጠል እባክዎ ክፍያ ይፈጽሙ።",
+      "input_too_long": "ጽሑፍዎ በጣም ረጅም ነው። እባክዎ አሳጥረው እንደገና ይሞክሩ።",
+      "ai_unavailable": "የAI አዘጋጁ አሁን ሥራ በዝቶበታል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ፣ ወይም ነጻውን ዝግጅት ይጠቀሙ።",
+      "daily_limit": "የዛሬውን የAI አዘጋጅ ገደብ ጨርሰዋል። እባክዎ ነገ እንደገና ይሞክሩ፣ ወይም ነጻውን ዝግጅት ይጠቀሙ።"
+    },
+    "emailNotice": "ክፍያዎን ለማረጋገጥ እና ስለ ሲቪዎ እርስዎን ለማግኘት ኢሜይልዎን እናስቀምጣለን።"
+  }
+}

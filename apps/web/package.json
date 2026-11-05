@@ -1,0 +1,30 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/write-headers.mjs",
+    "start": "next start",
+    "lint": "eslint",
+    "check:i18n": "node scripts/check-messages.mjs"
+  },
+  "dependencies": {
+    "@resume-builder/shared": "*",
+    "docx": "^9.8.1",
+    "jspdf": "^4.2.1",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.3.8",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

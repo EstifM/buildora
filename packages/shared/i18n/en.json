@@ -1,0 +1,17 @@
+{
+  "bot": {
+    "start": "Hi! This bot handles Buildora payment approvals.\n\nYour chat ID is: {chatId}\nThe admin sets this ID as TELEGRAM_ADMIN_CHAT_ID.",
+    "newPayment": "💳 New payment to check\n\nPlan: {planName}\nAmount: {amount} ETB\nTransaction ID: {transactionId}\nEmail: {email}\nSubmitted: {submittedAt}\nPayment ID: {paymentId}\n\nCheck this transaction in your Telebirr app before approving.",
+    "approveButton": "✅ Approve",
+    "rejectButton": "❌ Reject",
+    "approvedNote": "✅ APPROVED — access until {expiresAt}",
+    "rejectedNote": "❌ REJECTED",
+    "approvedToast": "Approved",
+    "rejectedToast": "Rejected",
+    "alreadyDecided": "This payment was already {status}.",
+    "notFound": "Payment not found.",
+    "notAllowed": "You are not allowed to do this.",
+    "planDaily": "1 day unlimited",
+    "planWeekly": "7 days unlimited"
+  }
+}

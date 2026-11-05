@@ -1,0 +1,170 @@
+{
+  "common": {
+    "lastUpdated": "Last updated: {date}",
+    "date": "12 October 2026",
+    "contactEmail": "[support email]",
+    "backHome": "Back to home"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "metaTitle": "Privacy Policy | Buildora",
+    "description": "How Buildora collects, uses and protects your email, payment details and resume data.",
+    "intro": "This Privacy Policy explains what information Buildora (\"we\", \"us\") collects when you use our resume builder, why we collect it, and how we protect it. By using Buildora, you agree to this policy.",
+    "sections": [
+      {
+        "heading": "1. Information we collect",
+        "paragraphs": ["We collect only what we need to run the service:"],
+        "list": [
+          "Email address – when you unlock downloads, try the AI Builder or submit a payment.",
+          "Payment details – the plan you choose, the amount, and the Telebirr transaction ID (reference number) you enter. We never see or store your Telebirr PIN, balance or account password.",
+          "Resume and job description text – the content you paste so we can build your improved resume.",
+          "Technical data – a one-way, salted hash of your IP address (not the IP itself) to prevent abuse, and basic usage records such as the number of AI requests.",
+          "Data stored in your browser – a secret access code for your paid plan, your language choice and, for the current session, your email. You can clear these at any time in your browser settings."
+        ]
+      },
+      {
+        "heading": "2. How we use your information",
+        "list": [
+          "To provide the resume builder, the AI rewrite and the PDF/Word downloads.",
+          "To verify Telebirr payments and activate your 1-day or 7-day access.",
+          "To contact you about your resume, your payment or our service.",
+          "To prevent fraud and abuse, including the reuse of transaction IDs.",
+          "To keep financial and audit records."
+        ],
+        "paragraphs": ["We use your information only to run Buildora, and we never sell it. We use it:"]
+      },
+      {
+        "heading": "3. Resume data is processed temporarily",
+        "paragraphs": [
+          "The free builder runs in your browser; your resume text is not sent to our servers for it.",
+          "When you use the paid AI Builder, your resume, the job description and any instructions are sent to our server and to Cloudflare Workers AI only to generate your result. We do not store this text after the result is returned. We keep only usage information such as text length and token counts.",
+          "PDF and Word files are created in your browser. If we ever store uploaded files or generated resumes on our servers, they will be deleted automatically within 3 hours."
+        ]
+      },
+      {
+        "heading": "4. Emails and payment records",
+        "paragraphs": [
+          "Email addresses are stored in our database so we can contact you and link your activity to your payments.",
+          "Transaction IDs are stored permanently. This makes sure each Telebirr payment can be used only once and keeps an accurate financial record. Payment records (transaction ID, email, plan, amount, status and dates) are kept permanently for accounting, fraud prevention and dispute handling.",
+          "To confirm a payment, the transaction ID, email, plan and amount are shared with our administrator through a private Telegram bot."
+        ]
+      },
+      {
+        "heading": "5. Service providers",
+        "paragraphs": ["We use trusted providers to run Buildora. They process data only to provide their service to us:"],
+        "list": [
+          "Cloudflare – website hosting, our API and AI processing (Workers AI).",
+          "Neon – our secure Postgres database.",
+          "Telegram – private payment notifications to our administrator.",
+          "Telebirr (Ethio Telecom) – you make payments directly in the Telebirr app; their own terms and privacy policy apply."
+        ]
+      },
+      {
+        "heading": "6. Security",
+        "paragraphs": [
+          "We use encrypted connections (HTTPS), keep secret keys out of the website code, store only a hash of your access code and of your IP address, limit the number of requests, and restrict who can approve payments. No system is perfectly secure, but we work to protect your information."
+        ]
+      },
+      {
+        "heading": "7. Your choices and rights",
+        "paragraphs": [
+          "You can ask us to access, correct or delete your email address and other personal information by contacting us at {contactEmail}. We may keep payment records and transaction IDs where we need them for financial, legal or fraud-prevention reasons.",
+          "Buildora is not intended for children under 16."
+        ]
+      },
+      {
+        "heading": "8. Changes to this policy",
+        "paragraphs": ["We may update this policy from time to time. The \"Last updated\" date above shows when it last changed. Continued use of Buildora after an update means you accept the new policy."]
+      },
+      {
+        "heading": "9. Contact",
+        "paragraphs": ["Questions about this policy? Contact us at {contactEmail}."]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "metaTitle": "Terms of Service | Buildora",
+    "description": "The rules for using Buildora, including payments via Telebirr, access periods and AI-generated content.",
+    "intro": "These Terms of Service (\"Terms\") govern your use of Buildora, an online resume builder. By using Buildora, you agree to these Terms. If you do not agree, please do not use the service.",
+    "sections": [
+      {
+        "heading": "1. The service",
+        "paragraphs": [
+          "Buildora helps you tailor your resume to a job description. The free builder checks keywords and suggests improvements. The paid AI Builder rewrites your resume using artificial intelligence. Downloads are available as PDF and Word files."
+        ]
+      },
+      {
+        "heading": "2. Your responsibilities",
+        "list": [
+          "Provide accurate information, including a valid email address.",
+          "Only include skills, experience and qualifications that are true. You are responsible for the final content of your resume.",
+          "Do not misuse the service: no automated scraping, no attempts to bypass payment, limits or security, and no unlawful, harmful or misleading content.",
+          "Keep the device and browser you used to pay secure; your paid access is linked to it."
+        ]
+      },
+      {
+        "heading": "3. Payments via Telebirr",
+        "list": [
+          "Paid plans: 50 ETB for 1 day of unlimited access, or 200 ETB for 7 days of unlimited access. Prices may change; the price shown when you pay applies.",
+          "You pay directly in the Telebirr app to the number shown on our website, then enter the transaction ID (reference number) from your receipt.",
+          "Payments are checked manually. Access starts when your payment is approved and ends automatically after 1 or 7 days.",
+          "Each transaction ID can be used only once. Transaction IDs are stored permanently and cannot be reused, even if a payment is not approved.",
+          "Entering a false or someone else's transaction ID is not allowed and leads to rejection."
+        ]
+      },
+      {
+        "heading": "4. Refunds",
+        "paragraphs": [
+          "Because access is activated quickly and digital content is delivered immediately, payments are generally non-refundable. If we cannot confirm your payment, no access is granted; contact us at {contactEmail} with your Telebirr receipt and we will review it."
+        ]
+      },
+      {
+        "heading": "5. Fair use",
+        "paragraphs": [
+          "\"Unlimited\" access means normal personal use. To keep the service available for everyone, we apply reasonable limits, such as a maximum number of AI rewrites per day."
+        ]
+      },
+      {
+        "heading": "6. AI-generated content and scores",
+        "paragraphs": [
+          "AI output can contain mistakes. Always review your resume before using it. The ATS match score is an estimate based on keywords and structure; it does not reflect how any specific employer or system will rank you. Buildora does not guarantee interviews or job offers."
+        ]
+      },
+      {
+        "heading": "7. Your content",
+        "paragraphs": [
+          "You keep ownership of your resume and the text you provide. You give us permission to process it only to provide the service, as described in our Privacy Policy."
+        ]
+      },
+      {
+        "heading": "8. Availability and changes",
+        "paragraphs": [
+          "We work to keep Buildora available but cannot promise uninterrupted service. We may change, suspend or discontinue features at any time."
+        ]
+      },
+      {
+        "heading": "9. Limitation of liability",
+        "paragraphs": [
+          "Buildora is provided \"as is\". To the extent permitted by law, we are not liable for indirect or consequential losses, and our total liability for any claim is limited to the amount you paid us in the 30 days before the claim."
+        ]
+      },
+      {
+        "heading": "10. Termination",
+        "paragraphs": [
+          "We may suspend or end access for anyone who breaks these Terms, for example by submitting false transaction IDs or abusing the service."
+        ]
+      },
+      {
+        "heading": "11. Governing law",
+        "paragraphs": ["These Terms are governed by the laws of the Federal Democratic Republic of Ethiopia."]
+      },
+      {
+        "heading": "12. Changes and contact",
+        "paragraphs": [
+          "We may update these Terms. The \"Last updated\" date above shows when they last changed, and continued use means you accept them. Questions? Contact us at {contactEmail}."
+        ]
+      }
+    ]
+  }
+}
