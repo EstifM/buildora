@@ -29,3 +29,8 @@ npm-debug.log*
 .DS_Store
 .vscode/
 .idea/
+
+# AI coding tool files (kept locally, not in the repo)
+.claude/
+CLAUDE.md
+AGENTS.md
