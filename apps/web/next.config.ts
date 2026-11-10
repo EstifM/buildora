@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
   output: "export",
   // The shared package ships TypeScript source, so Next needs to compile it.
   transpilePackages: ["@resume-builder/shared"],
+  // One 404 page for the whole site (the app has two root layouts, one per language): app/global-not-found.tsx.
+  experimental: { globalNotFound: true },
   // Dev only: lets you open the dev server from a phone or another computer on your
   // home/office network (e.g. http://192.168.1.5:3000). Without this, Next blocks its
   // dev scripts for those addresses and the page loads but nothing is interactive.

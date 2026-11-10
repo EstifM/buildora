@@ -6,7 +6,7 @@ How a payment works:
 2. In the payment popup they enter their email and the transaction number from the receipt.
 3. The API (`apps/api`, a Cloudflare Worker) stores the payment as **pending** and the Telegram bot sends the admin a message with **Approve / Reject** buttons.
 4. The admin checks the transaction in the Telebirr app, then taps a button.
-5. The website checks the status every 5 seconds and shows "Payment confirmed" (access for 1 or 7 days, counted from approval) or "Payment not approved".
+5. The website checks the status every 3 seconds and shows "Payment confirmed" (access for 1 or 7 days, counted from approval) or "Payment not approved".
 
 Every transaction number is stored forever (database `UNIQUE` constraint; deletes and edits are blocked by triggers), so it can never be used twice — even after a rejection.
 
@@ -20,7 +20,8 @@ Every transaction number is stored forever (database `UNIQUE` constraint; delete
 1. Create a project at https://neon.tech.
 2. Copy the connection string (`postgresql://...?sslmode=require`).
 3. Open the Neon **SQL Editor** and run each file in [`apps/api/migrations/`](../apps/api/migrations/) in order
-   (`0001_payments.sql`, `0002_ai_requests.sql`, `0003_leads.sql`). Each is safe to run more than once.
+   (`0001_payments.sql`, `0002_ai_requests.sql`, `0003_leads.sql`, `0004_ai_request_kind.sql`). Each is safe to run more than once.
+   Run new migrations **before** deploying the API version that needs them.
 
 The `leads` table collects user emails (one row per email) from payments, download unlocks and AI Builder
 attempts. See which emails came from where with:
@@ -51,10 +52,10 @@ npx wrangler secret put CORS_ALLOWED_ORIGINS    # see below
 `*.` allows one subdomain level, which covers Cloudflare Pages preview deployments:
 
 ```
-https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev
+https://buildora.pro.et,https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev
 ```
 
-Add your custom domain too once you have one (e.g. `https://buildora.et`). Plain `http://` is only accepted
+The first entry is the public site address; the two `pages.dev` entries keep Cloudflare's own address and preview deployments working. Plain `http://` is only accepted
 for localhost and home-network addresses (local development).
 
 The Worker checks every setting when it starts and **refuses to serve** (HTTP 503, details only in the Worker logs)
@@ -87,8 +88,8 @@ In the Cloudflare Pages project (Settings → Builds), set:
 - **Build output directory:** `apps/web/out`
 - **Environment variables** (public, not secrets):
   - `NEXT_PUBLIC_API_URL` = the Worker URL from step 5
-  - `NEXT_PUBLIC_SITE_URL` = the stable site address, e.g. `https://resume-builder-ethiopia.pages.dev`
-    (not a per-deployment address like `https://f897bdec.….pages.dev`) or your custom domain
+  - `NEXT_PUBLIC_SITE_URL` = `https://buildora.pro.et` (the public address; never a `pages.dev` address,
+    and never a per-deployment one like `https://f897bdec.….pages.dev`)
 
 Pages builds fail on purpose if either URL is missing or not `https://`. Locally, copy `apps/web/.env.example`
 to `apps/web/.env.local`.

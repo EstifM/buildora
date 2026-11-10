@@ -1,5 +1,7 @@
+import Link from "next/link";
 import type { Locale } from "@resume-builder/shared";
 import { getTranslator } from "@/lib/i18n";
+import { localePath } from "@/lib/locale";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const t = getTranslator(locale);
@@ -11,7 +13,10 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="text-xs">{t("landing.footer.privacy")}</p>
         </div>
         {/* The legal pages are English only, on every site language. */}
-        <nav aria-label={t("landing.footer.legalNav")} className="flex gap-4">
+        <nav aria-label={t("landing.footer.legalNav")} className="flex flex-wrap gap-4">
+          <Link href={localePath(locale, "/guides")} className="font-medium text-slate-600 hover:text-emerald-700 hover:underline">
+            {t("landing.footer.guidesLink")}
+          </Link>
           <a href="/privacy" hrefLang="en" className="font-medium text-slate-600 hover:text-emerald-700 hover:underline">
             {t("landing.footer.privacyLink")}
           </a>

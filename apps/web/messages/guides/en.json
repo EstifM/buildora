@@ -1,0 +1,356 @@
+{
+  "common": {
+    "updated": "Updated {date}",
+    "readTime": "{minutes} min read",
+    "keyPointsTitle": "Key points",
+    "backToGuides": "All guides",
+    "breadcrumbHome": "Home",
+    "breadcrumbGuides": "Guides",
+    "moreGuides": "More guides",
+    "ctaTitle": "Check your own resume in a minute",
+    "ctaBody": "Paste your resume and the job post. Buildora shows your ATS match score and the keywords you are missing. Free to try.",
+    "ctaButton": "Start Building",
+    "author": "Buildora team",
+    "breadcrumbLabel": "Breadcrumb",
+    "readGuide": "Read the guide"
+  },
+  "index": {
+    "title": "Resume guides for job seekers in Ethiopia",
+    "metaTitle": "Resume and CV guides for Ethiopia | Buildora",
+    "description": "Practical guides on ATS keywords, CV format and tailoring your resume for NGO, private and government jobs in Ethiopia.",
+    "intro": "Short, practical guides to help your CV get noticed, whether you apply through a job board, an NGO careers portal or by email."
+  },
+  "articles": [
+    {
+      "slug": "ats-keywords-ngo-jobs-ethiopia",
+      "title": "ATS keywords for NGO jobs in Ethiopia",
+      "metaTitle": "ATS keywords for NGO jobs in Ethiopia (by role) | Buildora",
+      "description": "The keywords NGO and UN recruiters search for in Ethiopia, grouped by role: programme, M&E, finance, logistics, WASH, health and more, and how to use them honestly.",
+      "date": "2026-11-11",
+      "readMinutes": 7,
+      "intro": "International NGOs, UN agencies and many local organisations in Ethiopia receive hundreds of applications for one vacancy. Most of them collect applications through an online system or screen CVs quickly against the terms of reference. In both cases the same thing decides who is shortlisted: whether your CV uses the words in the job post. This guide lists the keywords that appear most often, by role.",
+      "keyPoints": [
+        "Take keywords from the vacancy itself first; use the lists below to check what you forgot.",
+        "Write both the full term and the short form once, for example \"Monitoring and Evaluation (M&E)\".",
+        "Put keywords in your summary, your skills section and inside real experience bullets.",
+        "Only use a keyword you can explain in an interview."
+      ],
+      "sections": [
+        {
+          "heading": "Why keywords matter for NGO applications",
+          "paragraphs": [
+            "An applicant tracking system (ATS) stores every application as text. Recruiters then search or filter, for example for \"MEAL\", \"donor reporting\" or \"Afaan Oromo\". A CV that describes the same work in different words can be missed, even when the person is qualified.",
+            "Human screeners work the same way. They hold the terms of reference in one hand and look for its exact terms in your CV. Matching the wording makes their job easy."
+          ]
+        },
+        {
+          "heading": "Programme and project management",
+          "list": [
+            "Project cycle management (PCM), project planning, work plan, implementation",
+            "Logical framework (logframe), theory of change, results framework",
+            "Budget management, budget versus actual, burn rate",
+            "Donor reporting, narrative report, proposal writing, concept note",
+            "Partner management, sub-grantee, capacity building",
+            "Stakeholder coordination, government liaison, woreda and zonal offices"
+          ]
+        },
+        {
+          "heading": "Monitoring, evaluation, accountability and learning (MEAL)",
+          "list": [
+            "Monitoring and Evaluation (M&E), MEAL, indicators, indicator tracking table",
+            "Baseline, midline and endline surveys, needs assessment",
+            "Data collection, data quality assessment (DQA), data analysis",
+            "KoboToolbox, ODK, DHIS2, Excel, SPSS, Stata, Power BI",
+            "Post-distribution monitoring (PDM), feedback and complaints mechanism",
+            "Lessons learned, case studies, learning review"
+          ]
+        },
+        {
+          "heading": "Finance, grants and compliance",
+          "list": [
+            "Grant management, award management, sub-award, donor compliance",
+            "USAID, BHA, ECHO, EU, FCDO, UN agency rules (name the donors you really worked with)",
+            "Fund accounting, bank reconciliation, payroll, financial reporting",
+            "Internal controls, audit, cost allocation, cash forecasting",
+            "QuickBooks, Peachtree (Sage 50), SUN System, ERP",
+            "Ethiopian tax: withholding tax, income tax, pension contributions"
+          ]
+        },
+        {
+          "heading": "Logistics, procurement and administration",
+          "list": [
+            "Procurement, request for quotation (RFQ), bid analysis, purchase order",
+            "Supply chain, warehouse management, stock control, inventory",
+            "Fleet management, asset management, distribution",
+            "Vendor management, contract management",
+            "Human resources: recruitment, onboarding, HRIS, labour law"
+          ]
+        },
+        {
+          "heading": "Technical sectors",
+          "paragraphs": [
+            "Use the sector words exactly as the vacancy writes them."
+          ],
+          "list": [
+            "WASH: water supply, sanitation, hygiene promotion, water scheme rehabilitation",
+            "Health and nutrition: CMAM, IYCF, primary health care, health extension, SRH",
+            "Food security and livelihoods: PSNP, cash and voucher assistance (CVA), agriculture, resilience",
+            "Protection: child protection, GBV, case management, psychosocial support (PSS)",
+            "Education: education in emergencies (EiE), teacher training, school feeding",
+            "Emergency response: rapid assessment, IDP, refugee response, Sphere standards, cluster coordination"
+          ]
+        },
+        {
+          "heading": "Cross-cutting terms almost every vacancy asks for",
+          "list": [
+            "Safeguarding, PSEA, code of conduct",
+            "Gender mainstreaming, inclusion, do no harm, accountability to affected populations (AAP)",
+            "Community mobilisation, community engagement",
+            "Report writing, training and facilitation, teamwork under pressure",
+            "Languages: Amharic, Afaan Oromo, Tigrinya, Somali, Afar, English (list your real level)",
+            "Willingness to travel to field locations"
+          ]
+        },
+        {
+          "heading": "How to use the keywords without overdoing it",
+          "paragraphs": [
+            "Do not paste a list of words at the bottom of your CV. Put each keyword where it is true. A strong bullet reads like this: \"Led baseline and endline surveys in 4 woredas using KoboToolbox and reported indicator progress to the donor every quarter.\" That one line holds five searchable terms and one clear result.",
+            "Keep the layout simple: one column, normal headings such as Summary, Skills, Experience and Education, and no tables or text boxes. Save it as Word or a text-based PDF, not a scanned image."
+          ]
+        },
+        {
+          "heading": "Check your CV against the vacancy",
+          "paragraphs": [
+            "Paste your CV and the vacancy text into the Buildora builder. Free Build shows your match score, the keywords you already have and the ones you are missing, so you can add only the ones that apply to you."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cv-format-ethiopia",
+      "title": "CV format for jobs in Ethiopia: what to include",
+      "metaTitle": "CV format for jobs in Ethiopia: sections and layout | Buildora",
+      "description": "A clear CV format for Ethiopian employers: which sections to include, in what order, how long it should be and what to leave out.",
+      "date": "2026-11-11",
+      "readMinutes": 5,
+      "intro": "A good CV in Ethiopia is not different from a good CV anywhere: it is short, easy to scan and written for one job. This guide gives a simple structure that works for private companies, banks, NGOs and government applications.",
+      "keyPoints": [
+        "Use one column and standard headings so both people and software can read it.",
+        "Order: contact details, summary, skills, experience, education, then extras.",
+        "One to two pages is enough for most applicants.",
+        "Send Word or a text-based PDF, never a photo or scan of your CV."
+      ],
+      "sections": [
+        {
+          "heading": "1. Contact details",
+          "paragraphs": [
+            "Your full name, phone number, a professional email address and your city (for example Addis Ababa or Hawassa). Add a LinkedIn link if you keep it updated. You do not need your full home address, and personal details such as religion or ID numbers do not belong on a CV."
+          ]
+        },
+        {
+          "heading": "2. Professional summary",
+          "paragraphs": [
+            "Two to four sentences that say who you are, how many years of experience you have and what you are best at, using the words of the job post. Write a new summary for each application. Example: \"Accountant with 5 years of experience in payroll, bank reconciliation and IFRS reporting for a manufacturing company. Skilled in Peachtree and Microsoft Excel.\""
+          ]
+        },
+        {
+          "heading": "3. Skills",
+          "paragraphs": [
+            "A short list of the tools and abilities the job asks for and you really have: software, technical methods and languages. This is the section recruiters and ATS software search first."
+          ]
+        },
+        {
+          "heading": "4. Work experience",
+          "paragraphs": [
+            "Start with your most recent job. For each one give your job title, the employer, the town and the dates (month and year). Then add three to six bullets."
+          ],
+          "list": [
+            "Begin each bullet with an action verb: managed, prepared, trained, reduced.",
+            "Say what you did and what changed because of it. Use numbers where you have them.",
+            "Avoid \"Responsible for…\". Write \"Managed payroll for 120 staff\" instead.",
+            "Fresh graduates: use internships, apprenticeship, national service, volunteer work and final-year projects."
+          ]
+        },
+        {
+          "heading": "5. Education and training",
+          "paragraphs": [
+            "Your degree or diploma, the institution and the year you graduated. Add your CGPA only if it is strong or the vacancy asks for it. List relevant certificates and short courses (for example COC, accounting software, project management) underneath."
+          ]
+        },
+        {
+          "heading": "6. Languages and references",
+          "paragraphs": [
+            "List each language with your level. For references, \"Available on request\" is enough unless the vacancy asks for names; if it does, give two people who supervised your work, with their phone number and position."
+          ]
+        },
+        {
+          "heading": "Layout rules that help with ATS",
+          "list": [
+            "One column, no tables, text boxes, photos or graphics.",
+            "A common font such as Calibri or Arial, size 10.5 to 12.",
+            "Plain section headings and simple bullets.",
+            "File name with your name, for example abebe-kebede-cv.pdf.",
+            "Unless the vacancy says otherwise, write the CV in English and mention your Amharic and other languages in the skills section."
+          ]
+        },
+        {
+          "heading": "Make it fit the job",
+          "paragraphs": [
+            "The format gets your CV read; the keywords get it shortlisted. Use the Buildora builder to compare your CV with the job post and see your match score before you apply."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "what-is-ats",
+      "title": "What is an ATS and how do you pass it?",
+      "metaTitle": "What is an ATS? How to pass applicant tracking systems | Buildora",
+      "description": "A plain-language explanation of applicant tracking systems (ATS): what they do, what they do not do, and six steps to make your resume ATS-friendly.",
+      "date": "2026-11-11",
+      "readMinutes": 4,
+      "intro": "ATS stands for applicant tracking system. It is the software many employers use to receive applications, store them and help recruiters find the right candidates. If you have applied through a careers website and filled in a form, you have probably used one.",
+      "keyPoints": [
+        "An ATS turns your resume into text and makes it searchable.",
+        "Recruiters filter and search by the skills and titles in the job post.",
+        "Simple layout plus the job post's wording is what makes a resume ATS-friendly.",
+        "A score from any tool is an estimate, not a promise."
+      ],
+      "sections": [
+        {
+          "heading": "What an ATS actually does",
+          "paragraphs": [
+            "When you upload your resume, the system reads the file and pulls out the text: your name, contact details, job titles, employers, dates, education and skills. It then stores that text next to the vacancy.",
+            "Recruiters can sort applicants, search for words such as \"IFRS\" or \"project management\", and filter by answers to screening questions. Some systems also rank resumes by how closely they match the job description."
+          ]
+        },
+        {
+          "heading": "What it does not do",
+          "paragraphs": [
+            "An ATS does not understand your career the way a person does. It will not guess that \"bookkeeping\" means you can do \"accounts payable\", and it cannot read text inside an image. It also does not hire anyone: a person still makes the decision, usually after looking at the resumes the system surfaced first."
+          ]
+        },
+        {
+          "heading": "Six steps to an ATS-friendly resume",
+          "list": [
+            "Use the job post's exact wording for skills and tools you really have.",
+            "Write both the long and short form once: \"Customer Relationship Management (CRM)\".",
+            "Use standard headings: Summary, Skills, Experience, Education.",
+            "Keep to one column. Avoid tables, text boxes, headers, footers and graphics.",
+            "Send a Word file or a text-based PDF. If you cannot select the text in your PDF, the ATS cannot read it either.",
+            "Tailor the resume for each job instead of sending the same file everywhere."
+          ]
+        },
+        {
+          "heading": "Do employers in Ethiopia use ATS?",
+          "paragraphs": [
+            "Many international organisations, banks and larger companies collect applications through online portals that work this way, and job boards let employers search candidate profiles by keyword. Smaller employers often read CVs by hand, but they scan for the same words. Writing for an ATS helps in both cases."
+          ]
+        },
+        {
+          "heading": "Check your score",
+          "paragraphs": [
+            "Buildora compares your resume with a job description and shows a match score from 0 to 100, based mostly on keyword coverage and partly on structure. Use it to see what is missing, then decide what is true for you."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tailor-resume-to-job-description",
+      "title": "How to tailor your resume to a job description",
+      "metaTitle": "How to tailor your resume to a job description in 5 steps | Buildora",
+      "description": "Five steps to adapt your resume to each job post: find the keywords, rewrite your summary, reorder skills and strengthen bullets, without inventing anything.",
+      "date": "2026-11-11",
+      "readMinutes": 5,
+      "intro": "Sending the same resume to every vacancy is the most common reason qualified people are not shortlisted. Tailoring does not mean rewriting everything. It means showing the parts of your experience this employer asked for, in their words. Here is a method that takes about fifteen minutes.",
+      "keyPoints": [
+        "Read the job post twice and mark the skills, tools and duties it repeats.",
+        "Mirror its wording where it truthfully describes your experience.",
+        "Change the summary and the top skills every time; keep the facts the same.",
+        "Never add a skill you could not demonstrate."
+      ],
+      "sections": [
+        {
+          "heading": "Step 1: Find the keywords",
+          "paragraphs": [
+            "Mark every skill, tool, qualification and duty in the job post. Words that appear more than once, or in the requirements section, matter most. You will usually end up with 10 to 20 terms."
+          ]
+        },
+        {
+          "heading": "Step 2: Compare with your resume",
+          "paragraphs": [
+            "Sort the terms into three groups: already in your resume, true for you but written differently or missing, and not true for you. The second group is where the improvement is. Ignore the third group."
+          ]
+        },
+        {
+          "heading": "Step 3: Rewrite your summary",
+          "paragraphs": [
+            "Use the job title from the post and two or three of its most important keywords. Before: \"Hard-working professional seeking a challenging position.\" After: \"Sales officer with 4 years of experience in key account management and distributor relations in the FMCG sector.\""
+          ]
+        },
+        {
+          "heading": "Step 4: Reorder and reword your skills",
+          "paragraphs": [
+            "Move the skills this job asks for to the top of your skills section and use the employer's spelling. If the post says \"Microsoft Excel\" and you wrote \"MS Excel\", change it. If it says \"JavaScript\" and you wrote \"JS\", change it."
+          ]
+        },
+        {
+          "heading": "Step 5: Strengthen your experience bullets",
+          "list": [
+            "Replace weak openings: \"Responsible for managing the budget\" becomes \"Managed the budget\".",
+            "Bring the most relevant bullets to the top of each job.",
+            "Add the job post's terms where they fit the work you really did.",
+            "Keep numbers and results exactly as they are; do not improve them."
+          ]
+        },
+        {
+          "heading": "Before you send",
+          "list": [
+            "Read the resume once from top to bottom for spelling and dates.",
+            "Check that every keyword you added is something you can talk about.",
+            "Save the file with your name and the job title.",
+            "Write a short cover letter that names the role and one matching achievement."
+          ]
+        },
+        {
+          "heading": "Do it faster",
+          "paragraphs": [
+            "Buildora does steps 1 to 4 automatically for free: it finds the keywords, shows which ones you have and adds the missing skills as suggestions you can remove. The paid AI Builder also rewrites the summary and bullets and can write a matching cover letter."
+          ]
+        }
+      ]
+    }
+  ],
+  "llms": {
+    "summary": "Buildora is a web app that tailors a resume to a job description so it passes applicant tracking systems (ATS). It is built for job seekers in Ethiopia and works in English and Amharic.",
+    "whatTitle": "What it does",
+    "what": [
+      "Free Build: compares a resume with a job post, shows an ATS match score (0-100) before and after, adds missing job keywords to the Skills section and strengthens weak bullet openings. Runs in the browser.",
+      "AI Builder (paid): rewrites the whole resume for the job using only facts from the original resume, in three writing styles, and can write a matching cover letter.",
+      "Reads PDF, DOCX and TXT resumes on the user's device; the file is not uploaded.",
+      "Downloads as PDF and Word (DOCX) after entering an email address."
+    ],
+    "pricingTitle": "Pricing",
+    "pricing": [
+      "Free: keyword check, ATS score, improved resume and downloads.",
+      "Daily pass: {daily} ETB for 1 day of AI rewrites and cover letters.",
+      "Weekly pass: {weekly} ETB for 7 days of AI rewrites and cover letters.",
+      "Payment is by Telebirr. The user sends the amount, enters the transaction number, and access starts after manual approval. Each transaction number can be used once.",
+      "Fair use: up to 20 AI requests per day per paid user."
+    ],
+    "privacyTitle": "Privacy",
+    "privacy": [
+      "Free Build and file reading run in the browser; resume text is not sent to the server for them.",
+      "For the AI Builder, text is sent to the server and Cloudflare Workers AI only to generate the result and is not stored afterwards."
+    ],
+    "pagesTitle": "Pages",
+    "guidesTitle": "Guides",
+    "faqTitle": "FAQ",
+    "pageHome": "Home: overview, pricing and FAQ",
+    "pageBuilder": "Resume builder",
+    "pageAmharic": "Amharic version",
+    "pageGuides": "All guides",
+    "pagePrivacy": "Privacy Policy",
+    "pageTerms": "Terms of Service",
+    "pageGuidesAmharic": "All guides in Amharic"
+  }
+}

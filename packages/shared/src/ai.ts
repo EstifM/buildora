@@ -13,6 +13,19 @@ export interface AiRewriteRequest {
   style?: AiStyle;
 }
 
+// Cover letter for the same job, written from the finished resume (paid, after the rewrite).
+export interface AiCoverLetterRequest {
+  resumeText: string;
+  jobDescription: string;
+  instructions?: string;
+}
+
+export interface AiCoverLetterResponse {
+  coverLetter: string;
+  // True if the model hit its output limit, so the letter may be missing the end.
+  truncated: boolean;
+}
+
 export interface AiRewriteResponse {
   improvedText: string;
   // True if the model hit its output limit, so the result may be missing the end.

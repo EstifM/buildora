@@ -13,10 +13,10 @@ function sectionHeading(text: string): Paragraph {
   });
 }
 
-function bodyParagraph(text: string, isBullet: boolean): Paragraph {
+function bodyParagraph(text: string, isBullet: boolean, gap = false): Paragraph {
   return new Paragraph({
     ...(isBullet ? { bullet: { level: 0 } } : {}),
-    spacing: { after: 60 },
+    spacing: { after: gap ? 220 : 60 },
     children: [new TextRun({ text })],
   });
 }
@@ -31,7 +31,7 @@ export async function createResumeDocx(doc: ResumeDocument, title: string): Prom
     children.push(new Paragraph({ children: [new TextRun({ text: line, size: 20, color: "5A5A5A" })] }));
   }
   for (const block of doc.intro) {
-    children.push(bodyParagraph(block.text, block.type === "bullet"));
+    children.push(bodyParagraph(block.text, block.type === "bullet", doc.paragraphGap));
   }
   for (const section of doc.sections) {
     if (section.heading) children.push(sectionHeading(section.heading));

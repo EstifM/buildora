@@ -1,7 +1,7 @@
 {
   "common": {
     "lastUpdated": "Last updated: {date}",
-    "date": "12 October 2026",
+    "date": "11 November 2026",
     "contactEmail": "[support email]",
     "backHome": "Back to home"
   },
@@ -9,15 +9,17 @@
     "title": "Privacy Policy",
     "metaTitle": "Privacy Policy | Buildora",
     "description": "How Buildora collects, uses and protects your email, payment details and resume data.",
-    "intro": "This Privacy Policy explains what information Buildora (\"we\", \"us\") collects when you use our resume builder, why we collect it, and how we protect it. By using Buildora, you agree to this policy.",
+    "intro": "This Privacy Policy explains what information Buildora (\"we\", \"us\") collects when you use our resume builder at buildora.pro.et, why we collect it, and how we protect it. By using Buildora, you agree to this policy.",
     "sections": [
       {
         "heading": "1. Information we collect",
-        "paragraphs": ["We collect only what we need to run the service:"],
+        "paragraphs": [
+          "We collect only what we need to run the service:"
+        ],
         "list": [
           "Email address – when you unlock downloads, try the AI Builder or submit a payment.",
           "Payment details – the plan you choose, the amount, and the Telebirr transaction ID (reference number) you enter. We never see or store your Telebirr PIN, balance or account password.",
-          "Resume and job description text – the content you paste so we can build your improved resume.",
+          "Resume and job description text – the content you paste, or the text read from a file you choose, so we can build your improved resume and, if you ask for one, your cover letter.",
           "Technical data – a one-way, salted hash of your IP address (not the IP itself) to prevent abuse, and basic usage records such as the number of AI requests.",
           "Data stored in your browser – a secret access code for your paid plan, your language choice and, for the current session, your email. You can clear these at any time in your browser settings."
         ]
@@ -25,19 +27,21 @@
       {
         "heading": "2. How we use your information",
         "list": [
-          "To provide the resume builder, the AI rewrite and the PDF/Word downloads.",
+          "To provide the resume builder, the AI rewrite, the AI cover letter and the PDF/Word downloads.",
           "To verify Telebirr payments and activate your 1-day or 7-day access.",
           "To contact you about your resume, your payment or our service.",
           "To prevent fraud and abuse, including the reuse of transaction IDs.",
           "To keep financial and audit records."
         ],
-        "paragraphs": ["We use your information only to run Buildora, and we never sell it. We use it:"]
+        "paragraphs": [
+          "We use your information only to run Buildora, and we never sell it. We use it:"
+        ]
       },
       {
         "heading": "3. Resume data is processed temporarily",
         "paragraphs": [
-          "The free builder runs in your browser; your resume text is not sent to our servers for it.",
-          "When you use the paid AI Builder, your resume, the job description and any instructions are sent to our server and to Cloudflare Workers AI only to generate your result. We do not store this text after the result is returned. We keep only usage information such as text length and token counts.",
+          "The free builder runs in your browser; your resume text is not sent to our servers for it. When you choose a PDF, Word or text file, it is read inside your browser and the file itself is never uploaded.",
+          "When you use the paid AI Builder or ask for a cover letter, your resume, the job description and any instructions are sent to our server and to Cloudflare Workers AI only to generate your result. We do not store this text after the result is returned. We keep only usage information such as the type of request, text length and token counts.",
           "PDF and Word files are created in your browser. If we ever store uploaded files or generated resumes on our servers, they will be deleted automatically within 3 hours."
         ]
       },
@@ -51,7 +55,9 @@
       },
       {
         "heading": "5. Service providers",
-        "paragraphs": ["We use trusted providers to run Buildora. They process data only to provide their service to us:"],
+        "paragraphs": [
+          "We use trusted providers to run Buildora. They process data only to provide their service to us:"
+        ],
         "list": [
           "Cloudflare – website hosting, our API and AI processing (Workers AI).",
           "Neon – our secure Postgres database.",
@@ -74,11 +80,15 @@
       },
       {
         "heading": "8. Changes to this policy",
-        "paragraphs": ["We may update this policy from time to time. The \"Last updated\" date above shows when it last changed. Continued use of Buildora after an update means you accept the new policy."]
+        "paragraphs": [
+          "We may update this policy from time to time. The \"Last updated\" date above shows when it last changed. Continued use of Buildora after an update means you accept the new policy."
+        ]
       },
       {
         "heading": "9. Contact",
-        "paragraphs": ["Questions about this policy? Contact us at {contactEmail}."]
+        "paragraphs": [
+          "Questions about this policy? Contact us at {contactEmail}."
+        ]
       }
     ]
   },
@@ -91,7 +101,7 @@
       {
         "heading": "1. The service",
         "paragraphs": [
-          "Buildora helps you tailor your resume to a job description. The free builder checks keywords and suggests improvements. The paid AI Builder rewrites your resume using artificial intelligence. Downloads are available as PDF and Word files."
+          "Buildora helps you tailor your resume to a job description. The free builder checks keywords and suggests improvements. The paid AI Builder rewrites your resume using artificial intelligence and can write a matching cover letter. You can paste your resume or choose a PDF, Word or text file, which is read on your device. Downloads are available as PDF and Word files. Our guides are general information, not professional career or legal advice."
         ]
       },
       {
@@ -122,13 +132,13 @@
       {
         "heading": "5. Fair use",
         "paragraphs": [
-          "\"Unlimited\" access means normal personal use. To keep the service available for everyone, we apply reasonable limits, such as a maximum number of AI rewrites per day."
+          "\"Unlimited\" access means normal personal use. To keep the service available for everyone, we apply reasonable limits, such as a maximum number of AI requests (resume rewrites and cover letters together) per day."
         ]
       },
       {
         "heading": "6. AI-generated content and scores",
         "paragraphs": [
-          "AI output can contain mistakes. Always review your resume before using it. The ATS match score is an estimate based on keywords and structure; it does not reflect how any specific employer or system will rank you. Buildora does not guarantee interviews or job offers."
+          "AI output, including rewritten resumes and cover letters, can contain mistakes. Always review it before using it. The ATS match score is an estimate based on keywords and structure; it does not reflect how any specific employer or system will rank you. Buildora does not guarantee interviews or job offers."
         ]
       },
       {
@@ -157,7 +167,9 @@
       },
       {
         "heading": "11. Governing law",
-        "paragraphs": ["These Terms are governed by the laws of the Federal Democratic Republic of Ethiopia."]
+        "paragraphs": [
+          "These Terms are governed by the laws of the Federal Democratic Republic of Ethiopia."
+        ]
       },
       {
         "heading": "12. Changes and contact",

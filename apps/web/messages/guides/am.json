@@ -1,0 +1,323 @@
+{
+  "common": {
+    "updated": "የተሻሻለው፦ {date}",
+    "readTime": "የ{minutes} ደቂቃ ንባብ",
+    "keyPointsTitle": "ዋና ዋና ነጥቦች",
+    "backToGuides": "ሁሉም መመሪያዎች",
+    "breadcrumbHome": "መነሻ",
+    "breadcrumbGuides": "መመሪያዎች",
+    "moreGuides": "ተጨማሪ መመሪያዎች",
+    "ctaTitle": "የራስዎን ሲቪ በአንድ ደቂቃ ውስጥ ይፈትሹ",
+    "ctaBody": "ሲቪዎንና የሥራ ማስታወቂያውን ይለጥፉ። Buildora የATS ውጤትዎንና የጎደሉዎትን ቁልፍ ቃላት ያሳያል። በነጻ ይሞክሩ።",
+    "ctaButton": "ማዘጋጀት ይጀምሩ",
+    "author": "የBuildora ቡድን",
+    "breadcrumbLabel": "የገጽ መንገድ",
+    "readGuide": "መመሪያውን ያንብቡ"
+  },
+  "index": {
+    "title": "በኢትዮጵያ ላሉ ሥራ ፈላጊዎች የሲቪ መመሪያዎች",
+    "metaTitle": "ለኢትዮጵያ የሲቪ መመሪያዎች | Buildora",
+    "description": "ስለ ATS ቁልፍ ቃላት፣ ስለ ሲቪ አቀራረብ እና በኢትዮጵያ ለNGO፣ ለግል እና ለመንግሥት ሥራዎች ሲቪን ስለማስተካከል ተግባራዊ መመሪያዎች።",
+    "intro": "በሥራ ማስታወቂያ ድረ-ገጽ፣ በNGO የቅጥር ፖርታል ወይም በኢሜይል ቢያመለክቱ ሲቪዎ ትኩረት እንዲያገኝ የሚረዱ አጫጭርና ተግባራዊ መመሪያዎች።"
+  },
+  "articles": [
+    {
+      "slug": "ats-keywords-ngo-jobs-ethiopia",
+      "title": "በኢትዮጵያ ለNGO ሥራዎች የሚያስፈልጉ የATS ቁልፍ ቃላት",
+      "metaTitle": "በኢትዮጵያ ለNGO ሥራዎች የATS ቁልፍ ቃላት (በሥራ ዘርፍ) | Buildora",
+      "description": "በኢትዮጵያ የNGO እና የተባበሩት መንግሥታት ቀጣሪዎች የሚፈልጓቸው ቁልፍ ቃላት በሥራ ዘርፍ ተከፋፍለው፦ ፕሮግራም፣ M&E፣ ፋይናንስ፣ ሎጂስቲክስ፣ WASH፣ ጤና እና ሌሎችም፤ በታማኝነት እንዴት እንደሚጠቀሙባቸውም ጭምር።",
+      "date": "2026-11-11",
+      "readMinutes": 7,
+      "intro": "ዓለም አቀፍ NGOዎች፣ የተባበሩት መንግሥታት ኤጀንሲዎች እና በኢትዮጵያ ያሉ ብዙ የአገር ውስጥ ድርጅቶች ለአንድ ክፍት የሥራ ቦታ በመቶዎች የሚቆጠሩ ማመልከቻዎችን ይቀበላሉ። አብዛኞቹ ማመልከቻዎችን በኦንላይን ሥርዓት ይሰበስባሉ ወይም ሲቪዎችን ከሥራ ዝርዝሩ (terms of reference) ጋር በፍጥነት ያነጻጽራሉ። በሁለቱም ሁኔታ ማን ለቃለ መጠይቅ እንደሚመረጥ የሚወስነው አንድ ነገር ነው፦ ሲቪዎ በሥራ ማስታወቂያው ውስጥ ያሉትን ቃላት መጠቀሙ። ይህ መመሪያ በብዛት የሚታዩትን ቁልፍ ቃላት በሥራ ዘርፍ ይዘረዝራል። ሲቪዎች በአብዛኛው በእንግሊዝኛ ስለሚጻፉ ቁልፍ ቃላቱ በእንግሊዝኛ ቀርበዋል።",
+      "keyPoints": [
+        "በመጀመሪያ ቁልፍ ቃላትን ከሥራ ማስታወቂያው ራሱ ይውሰዱ፤ ከታች ያሉትን ዝርዝሮች የረሱትን ለማረጋገጥ ይጠቀሙ።",
+        "ሙሉውን ቃልና አጭሩን ቅጽ አንድ ጊዜ አብረው ይጻፉ፤ ለምሳሌ \"Monitoring and Evaluation (M&E)\"።",
+        "ቁልፍ ቃላትን በማጠቃለያዎ፣ በክህሎት ክፍልዎ እና በእውነተኛ የሥራ ልምድ ነጥቦች ውስጥ ያስቀምጡ።",
+        "በቃለ መጠይቅ ላይ ማብራራት የሚችሉትን ቁልፍ ቃል ብቻ ይጠቀሙ።"
+      ],
+      "sections": [
+        {
+          "heading": "ቁልፍ ቃላት ለNGO ማመልከቻዎች ለምን አስፈላጊ ናቸው",
+          "paragraphs": [
+            "የአመልካቾች መከታተያ ሥርዓት (ATS) እያንዳንዱን ማመልከቻ እንደ ጽሑፍ ያስቀምጣል። ከዚያ ቀጣሪዎች ይፈልጋሉ ወይም ያጣራሉ፤ ለምሳሌ \"MEAL\"፣ \"donor reporting\" ወይም \"Afaan Oromo\" ብለው። ተመሳሳዩን ሥራ በሌላ ቃላት የሚገልጽ ሲቪ፣ ሰውየው ብቁ ቢሆንም እንኳ፣ ሊታለፍ ይችላል።",
+            "ሲቪን በእጅ የሚያጣሩ ሰዎችም እንዲሁ ነው የሚሠሩት። የሥራ ዝርዝሩን በአንድ እጃቸው ይዘው በውስጡ ያሉትን ትክክለኛ ቃላት በሲቪዎ ውስጥ ይፈልጋሉ። አገላለጹን ማዛመድ ሥራቸውን ያቀልላቸዋል።"
+          ]
+        },
+        {
+          "heading": "የፕሮግራም እና የፕሮጀክት አስተዳደር (Programme and project management)",
+          "list": [
+            "Project cycle management (PCM), project planning, work plan, implementation",
+            "Logical framework (logframe), theory of change, results framework",
+            "Budget management, budget versus actual, burn rate",
+            "Donor reporting, narrative report, proposal writing, concept note",
+            "Partner management, sub-grantee, capacity building",
+            "Stakeholder coordination, government liaison, woreda and zonal offices"
+          ]
+        },
+        {
+          "heading": "ክትትል፣ ግምገማ፣ ተጠያቂነት እና መማር (MEAL)",
+          "list": [
+            "Monitoring and Evaluation (M&E), MEAL, indicators, indicator tracking table",
+            "Baseline, midline and endline surveys, needs assessment",
+            "Data collection, data quality assessment (DQA), data analysis",
+            "KoboToolbox, ODK, DHIS2, Excel, SPSS, Stata, Power BI",
+            "Post-distribution monitoring (PDM), feedback and complaints mechanism",
+            "Lessons learned, case studies, learning review"
+          ]
+        },
+        {
+          "heading": "ፋይናንስ፣ ግራንት እና ደንብ ማክበር (Finance, grants and compliance)",
+          "list": [
+            "Grant management, award management, sub-award, donor compliance",
+            "USAID, BHA, ECHO, EU, FCDO, UN agency rules (በእርግጥ አብረው የሠሩባቸውን ለጋሾች ብቻ ይጥቀሱ)",
+            "Fund accounting, bank reconciliation, payroll, financial reporting",
+            "Internal controls, audit, cost allocation, cash forecasting",
+            "QuickBooks, Peachtree (Sage 50), SUN System, ERP",
+            "የኢትዮጵያ ግብር፦ withholding tax, income tax, pension contributions"
+          ]
+        },
+        {
+          "heading": "ሎጂስቲክስ፣ ግዥ እና አስተዳደር (Logistics, procurement and administration)",
+          "list": [
+            "Procurement, request for quotation (RFQ), bid analysis, purchase order",
+            "Supply chain, warehouse management, stock control, inventory",
+            "Fleet management, asset management, distribution",
+            "Vendor management, contract management",
+            "Human resources: recruitment, onboarding, HRIS, labour law"
+          ]
+        },
+        {
+          "heading": "የቴክኒክ ዘርፎች",
+          "paragraphs": [
+            "የዘርፉን ቃላት ልክ ማስታወቂያው እንደጻፋቸው ይጠቀሙ።"
+          ],
+          "list": [
+            "WASH: water supply, sanitation, hygiene promotion, water scheme rehabilitation",
+            "Health and nutrition: CMAM, IYCF, primary health care, health extension, SRH",
+            "Food security and livelihoods: PSNP, cash and voucher assistance (CVA), agriculture, resilience",
+            "Protection: child protection, GBV, case management, psychosocial support (PSS)",
+            "Education: education in emergencies (EiE), teacher training, school feeding",
+            "Emergency response: rapid assessment, IDP, refugee response, Sphere standards, cluster coordination"
+          ]
+        },
+        {
+          "heading": "ሁሉም ማስታወቂያ ማለት ይቻላል የሚጠይቃቸው የጋራ ቃላት",
+          "list": [
+            "Safeguarding, PSEA, code of conduct",
+            "Gender mainstreaming, inclusion, do no harm, accountability to affected populations (AAP)",
+            "Community mobilisation, community engagement",
+            "Report writing, training and facilitation, teamwork under pressure",
+            "ቋንቋዎች፦ Amharic, Afaan Oromo, Tigrinya, Somali, Afar, English (እውነተኛ ደረጃዎን ይጻፉ)",
+            "Willingness to travel to field locations (ወደ መስክ ሥራ ቦታዎች ለመጓዝ ፈቃደኝነት)"
+          ]
+        },
+        {
+          "heading": "ቁልፍ ቃላትን ሳያበዙ እንዴት መጠቀም እንደሚቻል",
+          "paragraphs": [
+            "በሲቪዎ ግርጌ ላይ የቃላት ዝርዝር አይለጥፉ። እያንዳንዱን ቁልፍ ቃል እውነት በሆነበት ቦታ ያስቀምጡ። ጠንካራ ነጥብ እንዲህ ይነበባል፦ \"Led baseline and endline surveys in 4 woredas using KoboToolbox and reported indicator progress to the donor every quarter.\" ይህ አንድ መስመር አምስት ሊፈለጉ የሚችሉ ቃላትንና አንድ ግልጽ ውጤት ይዟል።",
+            "አቀማመጡን ቀላል ያድርጉ፦ አንድ አምድ፣ እንደ Summary፣ Skills፣ Experience እና Education ያሉ የተለመዱ ርዕሶች፤ ሠንጠረዥ ወይም የጽሑፍ ሳጥን አይጠቀሙ። በWord ወይም ጽሑፉ ሊመረጥ በሚችል PDF ያስቀምጡት፤ ስካን በተደረገ ምስል አይደለም።"
+          ]
+        },
+        {
+          "heading": "ሲቪዎን ከማስታወቂያው ጋር ያነጻጽሩ",
+          "paragraphs": [
+            "ሲቪዎንና የማስታወቂያውን ጽሑፍ በBuildora አዘጋጅ ላይ ይለጥፉ። ነጻው ዝግጅት የATS ውጤትዎን፣ ያሉዎትን ቁልፍ ቃላትና የጎደሉዎትን ያሳያል፤ እርስዎም ለእርስዎ የሚሠሩትን ብቻ ማከል ይችላሉ።"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cv-format-ethiopia",
+      "title": "በኢትዮጵያ ለሥራ የሚሆን የሲቪ አቀራረብ፦ ምን መካተት አለበት",
+      "metaTitle": "በኢትዮጵያ ለሥራ የሚሆን የሲቪ አቀራረብ፦ ክፍሎችና አቀማመጥ | Buildora",
+      "description": "ለኢትዮጵያ ቀጣሪዎች ግልጽ የሲቪ አቀራረብ፦ የትኞቹ ክፍሎች እንደሚካተቱ፣ በምን ቅደም ተከተል፣ ምን ያህል ርዝመት እንደሚኖረው እና ምን መተው እንዳለበት።",
+      "date": "2026-11-11",
+      "readMinutes": 5,
+      "intro": "በኢትዮጵያ ጥሩ ሲቪ በሌላ ቦታ ካለ ጥሩ ሲቪ አይለይም፦ አጭር፣ በቀላሉ የሚቃኝ እና ለአንድ ሥራ ተብሎ የተጻፈ ነው። ይህ መመሪያ ለግል ድርጅቶች፣ ለባንኮች፣ ለNGOዎች እና ለመንግሥት ሥራ ማመልከቻዎች የሚሠራ ቀላል አወቃቀር ይሰጣል።",
+      "keyPoints": [
+        "ሰዎችም ሶፍትዌርም እንዲያነቡት አንድ አምድና የተለመዱ ርዕሶችን ይጠቀሙ።",
+        "ቅደም ተከተል፦ የመገኛ አድራሻ፣ ማጠቃለያ፣ ክህሎቶች፣ የሥራ ልምድ፣ ትምህርት፣ ከዚያ ተጨማሪዎች።",
+        "ለአብዛኛው አመልካች ከአንድ እስከ ሁለት ገጽ በቂ ነው።",
+        "Word ወይም ጽሑፉ የሚመረጥ PDF ይላኩ፤ የሲቪዎን ፎቶ ወይም ስካን በፍጹም አይላኩ።"
+      ],
+      "sections": [
+        {
+          "heading": "1. የመገኛ አድራሻ",
+          "paragraphs": [
+            "ሙሉ ስምዎ፣ ስልክ ቁጥርዎ፣ ሙያዊ የኢሜይል አድራሻ እና ከተማዎ (ለምሳሌ አዲስ አበባ ወይም ሐዋሳ)። LinkedIn ገጽዎን ወቅታዊ የሚያደርጉት ከሆነ ሊንኩን ያክሉ። ሙሉ የቤት አድራሻ አያስፈልግም፤ እንደ ሃይማኖት ወይም የመታወቂያ ቁጥር ያሉ የግል መረጃዎችም በሲቪ ላይ ቦታ የላቸውም።"
+          ]
+        },
+        {
+          "heading": "2. ሙያዊ ማጠቃለያ (Professional summary)",
+          "paragraphs": [
+            "ማን እንደሆኑ፣ ስንት ዓመት ልምድ እንዳለዎት እና በምን እንደሚበልጡ የሚገልጹ ከሁለት እስከ አራት ዓረፍተ ነገሮች፤ በሥራ ማስታወቂያው ቃላት። ለእያንዳንዱ ማመልከቻ አዲስ ማጠቃለያ ይጻፉ። ምሳሌ፦ \"Accountant with 5 years of experience in payroll, bank reconciliation and IFRS reporting for a manufacturing company. Skilled in Peachtree and Microsoft Excel.\""
+          ]
+        },
+        {
+          "heading": "3. ክህሎቶች (Skills)",
+          "paragraphs": [
+            "ሥራው የሚጠይቃቸውና በእርግጥ ያሉዎት መሣሪያዎችና ችሎታዎች አጭር ዝርዝር፦ ሶፍትዌር፣ የቴክኒክ ዘዴዎች እና ቋንቋዎች። ቀጣሪዎችና የATS ሶፍትዌር መጀመሪያ የሚፈልጉት በዚህ ክፍል ነው።"
+          ]
+        },
+        {
+          "heading": "4. የሥራ ልምድ (Work experience)",
+          "paragraphs": [
+            "ከቅርብ ጊዜ ሥራዎ ይጀምሩ። ለእያንዳንዱ የሥራ መደብዎን፣ ቀጣሪውን፣ ከተማውን እና ቀኖቹን (ወርና ዓመት) ይጻፉ። ከዚያ ከሦስት እስከ ስድስት ነጥቦችን ያክሉ።"
+          ],
+          "list": [
+            "እያንዳንዱን ነጥብ በድርጊት ግስ ይጀምሩ፦ managed, prepared, trained, reduced።",
+            "ምን እንደሠሩና በዚያ ምክንያት ምን እንደተለወጠ ይግለጹ። ቁጥር ካለዎት ይጠቀሙ።",
+            "\"Responsible for…\" ከማለት ይቆጠቡ። በምትኩ \"Managed payroll for 120 staff\" ብለው ይጻፉ።",
+            "አዲስ ተመራቂዎች፦ ኢንተርንሺፕ፣ አፓረንትሺፕ፣ ብሔራዊ አገልግሎት፣ የበጎ ፈቃድ ሥራ እና የመመረቂያ ፕሮጀክቶችን ይጠቀሙ።"
+          ]
+        },
+        {
+          "heading": "5. ትምህርትና ሥልጠና",
+          "paragraphs": [
+            "ዲግሪዎ ወይም ዲፕሎማዎ፣ ተቋሙ እና የተመረቁበት ዓመት። CGPA የሚጽፉት ጠንካራ ከሆነ ወይም ማስታወቂያው ከጠየቀ ብቻ ነው። ተዛማጅ የምስክር ወረቀቶችንና አጫጭር ሥልጠናዎችን (ለምሳሌ COC፣ የአካውንቲንግ ሶፍትዌር፣ የፕሮጀክት አስተዳደር) ከሥር ይዘርዝሩ።"
+          ]
+        },
+        {
+          "heading": "6. ቋንቋዎች እና ምስክሮች (References)",
+          "paragraphs": [
+            "እያንዳንዱን ቋንቋ ከደረጃዎ ጋር ይዘርዝሩ። ለምስክሮች፣ ማስታወቂያው ስም ካልጠየቀ በስተቀር \"Available on request\" ማለት በቂ ነው፤ ከጠየቀ ሥራዎን የተቆጣጠሩ ሁለት ሰዎችን ከስልክ ቁጥራቸውና ከሥራ መደባቸው ጋር ይስጡ።"
+          ]
+        },
+        {
+          "heading": "ለATS የሚረዱ የአቀማመጥ ደንቦች",
+          "list": [
+            "አንድ አምድ፤ ሠንጠረዥ፣ የጽሑፍ ሳጥን፣ ፎቶ ወይም ግራፊክስ የለም።",
+            "እንደ Calibri ወይም Arial ያለ የተለመደ ፊደል፣ መጠኑ ከ10.5 እስከ 12።",
+            "ግልጽ የክፍል ርዕሶችና ቀላል ነጥቦች (bullets)።",
+            "ስምዎ ያለበት የፋይል ስም፤ ለምሳሌ abebe-kebede-cv.pdf።",
+            "ማስታወቂያው ሌላ ካላለ በስተቀር ሲቪውን በእንግሊዝኛ ይጻፉ፤ አማርኛና ሌሎች ቋንቋዎችዎን በክህሎት ክፍሉ ይጥቀሱ።"
+          ]
+        },
+        {
+          "heading": "ለሥራው እንዲስማማ ያድርጉት",
+          "paragraphs": [
+            "አቀራረቡ ሲቪዎ እንዲነበብ ያደርጋል፤ ቁልፍ ቃላቱ ደግሞ ለቃለ መጠይቅ እንዲመረጥ ያደርጋሉ። ከማመልከትዎ በፊት ሲቪዎን ከሥራ ማስታወቂያው ጋር ለማነጻጸርና የATS ውጤትዎን ለማየት የBuildora አዘጋጅን ይጠቀሙ።"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "what-is-ats",
+      "title": "ATS ምንድን ነው? እንዴትስ ማለፍ ይቻላል?",
+      "metaTitle": "ATS ምንድን ነው? የአመልካቾች መከታተያ ሥርዓትን እንዴት ማለፍ ይቻላል | Buildora",
+      "description": "ስለ አመልካቾች መከታተያ ሥርዓት (ATS) ቀላል ማብራሪያ፦ ምን እንደሚሠራ፣ ምን እንደማይሠራ፣ እና ሲቪዎን ለATS ተስማሚ ለማድረግ ስድስት ደረጃዎች።",
+      "date": "2026-11-11",
+      "readMinutes": 4,
+      "intro": "ATS ማለት applicant tracking system (የአመልካቾች መከታተያ ሥርዓት) ማለት ነው። ብዙ ቀጣሪዎች ማመልከቻዎችን ለመቀበል፣ ለማስቀመጥ እና ትክክለኛ እጩዎችን ለማግኘት የሚጠቀሙበት ሶፍትዌር ነው። በአንድ ድርጅት የቅጥር ድረ-ገጽ በኩል ቅጽ ሞልተው አመልክተው ከሆነ፣ ምናልባት ተጠቅመውበታል።",
+      "keyPoints": [
+        "ATS ሲቪዎን ወደ ጽሑፍ ቀይሮ ሊፈለግ የሚችል ያደርገዋል።",
+        "ቀጣሪዎች በሥራ ማስታወቂያው ውስጥ ባሉ ክህሎቶችና የሥራ መደቦች ያጣራሉ፣ ይፈልጋሉ።",
+        "ቀላል አቀማመጥና የሥራ ማስታወቂያው አገላለጽ ሲቪን ለATS ተስማሚ ያደርጉታል።",
+        "ከማንኛውም መሣሪያ የሚገኝ ውጤት ግምት እንጂ ዋስትና አይደለም።"
+      ],
+      "sections": [
+        {
+          "heading": "ATS በእርግጥ የሚሠራው",
+          "paragraphs": [
+            "ሲቪዎን ሲጭኑ ሥርዓቱ ፋይሉን አንብቦ ጽሑፉን ያወጣል፦ ስምዎን፣ የመገኛ አድራሻዎን፣ የሥራ መደቦችዎን፣ ቀጣሪዎችዎን፣ ቀኖችን፣ ትምህርትዎንና ክህሎቶችዎን። ከዚያ ያንን ጽሑፍ ከክፍት የሥራ ቦታው ጋር ያስቀምጣል።",
+            "ቀጣሪዎች አመልካቾችን መደርደር፣ እንደ \"IFRS\" ወይም \"project management\" ያሉ ቃላትን መፈለግ እና ለማጣሪያ ጥያቄዎች በተሰጡ መልሶች ማጣራት ይችላሉ። አንዳንድ ሥርዓቶች ሲቪዎችን ከሥራ መግለጫው ጋር ባላቸው ተዛማጅነት ደረጃም ይሰጣሉ።"
+          ]
+        },
+        {
+          "heading": "የማይሠራው",
+          "paragraphs": [
+            "ATS የሥራ ሕይወትዎን እንደ ሰው አይረዳም። \"bookkeeping\" ማለት \"accounts payable\" መሥራት ይችላሉ ማለት እንደሆነ አይገምትም፤ በምስል ውስጥ ያለ ጽሑፍም ማንበብ አይችልም። ማንንም አይቀጥርም፦ ውሳኔውን የሚወስነው አሁንም ሰው ነው፤ ብዙውን ጊዜ ሥርዓቱ ቀድሞ ያወጣቸውን ሲቪዎች ከተመለከተ በኋላ።"
+          ]
+        },
+        {
+          "heading": "ለATS ተስማሚ ሲቪ ስድስት ደረጃዎች",
+          "list": [
+            "በእርግጥ ላሉዎት ክህሎቶችና መሣሪያዎች የሥራ ማስታወቂያውን ትክክለኛ አገላለጽ ይጠቀሙ።",
+            "ረጅሙንና አጭሩን ቅጽ አንድ ጊዜ አብረው ይጻፉ፦ \"Customer Relationship Management (CRM)\"።",
+            "የተለመዱ ርዕሶችን ይጠቀሙ፦ Summary, Skills, Experience, Education።",
+            "በአንድ አምድ ይጻፉ። ሠንጠረዥ፣ የጽሑፍ ሳጥን፣ ራስጌ፣ ግርጌ እና ግራፊክስ ያስወግዱ።",
+            "የWord ፋይል ወይም ጽሑፉ የሚመረጥ PDF ይላኩ። በPDFዎ ውስጥ ያለውን ጽሑፍ መምረጥ ካልቻሉ ATSም ሊያነበው አይችልም።",
+            "አንድ ዓይነት ፋይል በየቦታው ከመላክ ይልቅ ሲቪውን ለእያንዳንዱ ሥራ ያስተካክሉ።"
+          ]
+        },
+        {
+          "heading": "በኢትዮጵያ ያሉ ቀጣሪዎች ATS ይጠቀማሉ?",
+          "paragraphs": [
+            "ብዙ ዓለም አቀፍ ድርጅቶች፣ ባንኮች እና ትልልቅ ኩባንያዎች ማመልከቻዎችን በዚህ መንገድ በሚሠሩ የኦንላይን ፖርታሎች ይሰበስባሉ፤ የሥራ ማስታወቂያ ድረ-ገጾችም ቀጣሪዎች የእጩዎችን መገለጫ በቁልፍ ቃል እንዲፈልጉ ያስችላሉ። ትናንሽ ቀጣሪዎች ብዙውን ጊዜ ሲቪዎችን በእጅ ያነባሉ፤ ግን የሚቃኙት ተመሳሳይ ቃላትን ነው። ለATS ብሎ መጻፍ በሁለቱም ሁኔታ ይጠቅማል።"
+          ]
+        },
+        {
+          "heading": "ውጤትዎን ይፈትሹ",
+          "paragraphs": [
+            "Buildora ሲቪዎን ከሥራ መግለጫ ጋር አነጻጽሮ ከ0 እስከ 100 ውጤት ያሳያል፤ ይህም በአብዛኛው በቁልፍ ቃላት ሽፋን፣ በከፊል ደግሞ በአወቃቀር ላይ የተመሠረተ ነው። ምን እንደጎደለ ለማየት ይጠቀሙበት፤ ከዚያ ለእርስዎ እውነት የሆነውን ይወስኑ።"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tailor-resume-to-job-description",
+      "title": "ሲቪዎን ለሥራ መግለጫው እንዴት ማስተካከል እንደሚቻል",
+      "metaTitle": "ሲቪዎን ለሥራ መግለጫ በ5 ደረጃዎች ያስተካክሉ | Buildora",
+      "description": "ሲቪዎን ለእያንዳንዱ የሥራ ማስታወቂያ ለማስማማት አምስት ደረጃዎች፦ ቁልፍ ቃላትን ማግኘት፣ ማጠቃለያን እንደገና መጻፍ፣ ክህሎቶችን ማስተካከል እና ነጥቦችን ማጠናከር፤ ምንም ሳይፈጥሩ።",
+      "date": "2026-11-11",
+      "readMinutes": 5,
+      "intro": "አንድ ዓይነት ሲቪ ለሁሉም ክፍት የሥራ ቦታ መላክ ብቁ ሰዎች ለቃለ መጠይቅ የማይመረጡበት ዋነኛ ምክንያት ነው። ማስተካከል ማለት ሁሉንም ነገር እንደገና መጻፍ አይደለም። ይህ ቀጣሪ የጠየቃቸውን የልምድዎን ክፍሎች በራሱ ቃላት ማሳየት ማለት ነው። አሥራ አምስት ደቂቃ ያህል የሚወስድ ዘዴ እነሆ።",
+      "keyPoints": [
+        "የሥራ ማስታወቂያውን ሁለት ጊዜ ያንብቡና የሚደጋግማቸውን ክህሎቶች፣ መሣሪያዎችና ኃላፊነቶች ምልክት ያድርጉ።",
+        "ልምድዎን በእውነት በሚገልጽበት ቦታ የማስታወቂያውን አገላለጽ ይጠቀሙ።",
+        "ማጠቃለያውንና ቀዳሚ ክህሎቶችን ሁልጊዜ ይቀይሩ፤ እውነታዎቹ ግን አይለወጡ።",
+        "ማሳየት የማይችሉትን ክህሎት በፍጹም አይጨምሩ።"
+      ],
+      "sections": [
+        {
+          "heading": "ደረጃ 1፦ ቁልፍ ቃላቱን ያግኙ",
+          "paragraphs": [
+            "በሥራ ማስታወቂያው ውስጥ ያለውን እያንዳንዱን ክህሎት፣ መሣሪያ፣ የትምህርት ዝግጅትና ኃላፊነት ምልክት ያድርጉ። ከአንድ ጊዜ በላይ የሚታዩ ወይም በመስፈርቶች (requirements) ክፍል ያሉ ቃላት ይበልጥ አስፈላጊ ናቸው። ብዙውን ጊዜ ከ10 እስከ 20 ቃላት ያገኛሉ።"
+          ]
+        },
+        {
+          "heading": "ደረጃ 2፦ ከሲቪዎ ጋር ያነጻጽሩ",
+          "paragraphs": [
+            "ቃላቱን በሦስት ይክፈሉ፦ በሲቪዎ ውስጥ ያሉ፣ ለእርስዎ እውነት የሆኑ ግን በሌላ መንገድ የተጻፉ ወይም የጎደሉ፣ እና ለእርስዎ እውነት ያልሆኑ። መሻሻሉ ያለው በሁለተኛው ቡድን ውስጥ ነው። ሦስተኛውን ቡድን ይተዉት።"
+          ]
+        },
+        {
+          "heading": "ደረጃ 3፦ ማጠቃለያዎን እንደገና ይጻፉ",
+          "paragraphs": [
+            "በማስታወቂያው ያለውን የሥራ መደብ ስምና ከዋና ቁልፍ ቃላቱ ሁለት ወይም ሦስቱን ይጠቀሙ። በፊት፦ \"Hard-working professional seeking a challenging position.\" በኋላ፦ \"Sales officer with 4 years of experience in key account management and distributor relations in the FMCG sector.\""
+          ]
+        },
+        {
+          "heading": "ደረጃ 4፦ ክህሎቶችዎን ያስተካክሉ፣ አገላለጹንም ያዛምዱ",
+          "paragraphs": [
+            "ይህ ሥራ የሚጠይቃቸውን ክህሎቶች ወደ ክህሎት ክፍልዎ አናት ያምጡ፤ የቀጣሪውንም አጻጻፍ ይጠቀሙ። ማስታወቂያው \"Microsoft Excel\" ካለና እርስዎ \"MS Excel\" ብለው ከጻፉ ይቀይሩት። \"JavaScript\" ካለና እርስዎ \"JS\" ብለው ከጻፉ ይቀይሩት።"
+          ]
+        },
+        {
+          "heading": "ደረጃ 5፦ የሥራ ልምድ ነጥቦችዎን ያጠናክሩ",
+          "list": [
+            "ደካማ አጀማመሮችን ይተኩ፦ \"Responsible for managing the budget\" የሚለው \"Managed the budget\" ይሁን።",
+            "በጣም ተዛማጅ የሆኑትን ነጥቦች ወደ እያንዳንዱ ሥራ አናት ያምጡ።",
+            "በእርግጥ ከሠሩት ሥራ ጋር በሚስማሙበት ቦታ የማስታወቂያውን ቃላት ያክሉ።",
+            "ቁጥሮችንና ውጤቶችን እንዳሉ ይተዉ፤ አያጋንኑ።"
+          ]
+        },
+        {
+          "heading": "ከመላክዎ በፊት",
+          "list": [
+            "የፊደል ስህተትና ቀኖችን ለማረጋገጥ ሲቪውን ከላይ እስከ ታች አንድ ጊዜ ያንብቡ።",
+            "ያከሉት እያንዳንዱ ቁልፍ ቃል ሊያወሩበት የሚችሉት መሆኑን ያረጋግጡ።",
+            "ፋይሉን በስምዎና በሥራ መደቡ ስም ያስቀምጡ።",
+            "የሥራ መደቡንና አንድ ተዛማጅ ስኬትዎን የሚጠቅስ አጭር የማመልከቻ ደብዳቤ ይጻፉ።"
+          ]
+        },
+        {
+          "heading": "በፍጥነት ይሥሩት",
+          "paragraphs": [
+            "Buildora ከደረጃ 1 እስከ 4 ያሉትን በነጻ በራሱ ይሠራል፦ ቁልፍ ቃላቱን ያገኛል፣ የትኞቹ እንዳሉዎት ያሳያል፣ የጎደሉ ክህሎቶችንም ሊያስወግዷቸው በሚችሉ ጥቆማዎች መልክ ያክላል። የሚከፈልበት የAI አዘጋጅ ማጠቃለያውንና ነጥቦቹንም እንደገና ይጽፋል፤ ተዛማጅ የማመልከቻ ደብዳቤም ሊጽፍ ይችላል።"
+          ]
+        }
+      ]
+    }
+  ]
+}

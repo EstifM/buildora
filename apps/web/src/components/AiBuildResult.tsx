@@ -8,6 +8,7 @@ import {
   type AiStyle,
   type ApiErrorCode,
 } from "@resume-builder/shared";
+import { CoverLetterPanel } from "@/components/CoverLetterPanel";
 import { DownloadPanel } from "@/components/DownloadPanel";
 import { AddedSkillChips, ResumePreview, ScoreCard } from "@/components/ResultParts";
 import { aiRewrite } from "@/lib/api";
@@ -101,6 +102,9 @@ export function AiBuildResult({
       truncated={state.result.truncated}
       resumeText={resumeText}
       jobDescription={jobDescription}
+      instructions={instructions}
+      accessToken={accessToken}
+      onAccessProblem={onAccessProblem}
       onRebuild={runAgain}
     />
   );
@@ -111,12 +115,18 @@ export function AiResultView({
   truncated,
   resumeText,
   jobDescription,
+  instructions,
+  accessToken,
+  onAccessProblem,
   onRebuild,
 }: {
   aiText: string;
   truncated: boolean;
   resumeText: string;
   jobDescription: string;
+  instructions: string;
+  accessToken: string;
+  onAccessProblem: () => void;
   onRebuild: () => void;
 }) {
   const t = useT();
@@ -156,6 +166,16 @@ export function AiResultView({
 
       {/* Downloads use the final text, including any skills the user removed. */}
       <DownloadPanel resumeText={result.improvedText} />
+
+      {/* Last step: a cover letter written from the finished resume. A new resume (key) starts a new letter. */}
+      <CoverLetterPanel
+        key={aiText}
+        resumeText={result.improvedText}
+        jobDescription={jobDescription}
+        instructions={instructions}
+        accessToken={accessToken}
+        onAccessProblem={onAccessProblem}
+      />
 
       <div className="text-center">
         <button

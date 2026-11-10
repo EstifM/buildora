@@ -8,9 +8,11 @@ import { useLocale, useT } from "@/components/LocaleProvider";
 import type { MessageKey } from "@/lib/i18n";
 import { localePath } from "@/lib/locale";
 
-const NAV_LINKS: { href: string; labelKey: MessageKey }[] = [
-  { href: "/", labelKey: "nav.home" },
+const NAV_LINKS: { href: string; labelKey: MessageKey; hideOnPhone?: boolean }[] = [
+  // On phones the logo is the home link, which leaves room for the other items.
+  { href: "/", labelKey: "nav.home", hideOnPhone: true },
   { href: "/builder", labelKey: "nav.builder" },
+  { href: "/guides", labelKey: "nav.guides" },
 ];
 
 export function SiteHeader() {
@@ -29,15 +31,16 @@ export function SiteHeader() {
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-3">
         <nav aria-label={t("nav.mainLabel")} className="flex shrink-0 items-center gap-0.5 sm:gap-1">
-          {NAV_LINKS.map(({ href: path, labelKey }) => {
+          {NAV_LINKS.map(({ href: path, labelKey, hideOnPhone }) => {
             const href = localePath(locale, path);
-            const isActive = pathname === href;
+            // Guide articles keep "Guides" highlighted.
+            const isActive = pathname === href || (path !== "/" && pathname.startsWith(`${href}/`));
             return (
               <Link
                 key={href}
                 href={href}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-lg px-2 py-2 text-sm font-medium transition-colors sm:px-3 ${
+                className={`rounded-lg px-2 py-2 text-sm font-medium transition-colors sm:px-3 ${hideOnPhone ? "hidden sm:block " : ""}${
                   isActive
                     ? "bg-emerald-50 text-emerald-700"
                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"

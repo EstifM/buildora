@@ -36,8 +36,11 @@ export interface PaymentAttempt {
   ipHash?: string;
 }
 
+export type AiRequestKind = "rewrite" | "cover_letter";
+
 export interface AiRequestLog {
   paymentId: string;
+  kind: AiRequestKind;
   outcome: "success" | "ai_error" | "empty_output";
   inputChars: number;
   outputChars: number;
@@ -184,10 +187,11 @@ export class NeonPaymentRepository implements PaymentRepository {
 
   async logAiRequest(entry: AiRequestLog): Promise<void> {
     await this.rows(
-      `INSERT INTO ai_requests (payment_id, outcome, input_chars, output_chars, prompt_tokens, completion_tokens, truncated)
-       VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+      `INSERT INTO ai_requests (payment_id, kind, outcome, input_chars, output_chars, prompt_tokens, completion_tokens, truncated)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
       [
         entry.paymentId,
+        entry.kind,
         entry.outcome,
         entry.inputChars,
         entry.outputChars,

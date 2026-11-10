@@ -30,7 +30,7 @@ const STYLE_GUIDES: Record<AiStyle, string> = {
 // Users can't close our data blocks early by typing the tag names themselves.
 const BLOCK_TAG_RE = /<\/?\s*(resume|job_description|job_keywords|extra_instructions)\s*>/gi;
 
-function asData(text: string): string {
+export function asData(text: string): string {
   return text.replace(BLOCK_TAG_RE, "").trim();
 }
 

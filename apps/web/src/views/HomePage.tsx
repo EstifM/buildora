@@ -3,24 +3,27 @@ import Link from "next/link";
 import { PRICING_PLANS, type Locale, type PlanId } from "@resume-builder/shared";
 import { getTranslator, type MessageKey, type Translator } from "@/lib/i18n";
 import { localePath } from "@/lib/locale";
-import { landingJsonLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { getGuides } from "@/lib/guides";
+import { FAQ_KEYS, landingJsonLd } from "@/lib/seo";
+import { GuideCard } from "@/views/GuidesPage";
 
 const STEPS = ["step1", "step2", "step3"] as const;
 const PLAN_FEATURES = ["feature1", "feature2", "feature3"] as const;
 const HIGHLIGHTED_PLAN: PlanId = "weekly";
+const TRUST_ITEMS = ["item1", "item2", "item3", "item4"] as const;
+const HOME_GUIDE_COUNT = 3;
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = getTranslator(locale);
   return (
     <>
-      {/* Structured data for search and answer engines. "<" is escaped so the JSON can't break out of the tag. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(landingJsonLd(locale)).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={landingJsonLd(locale)} />
       <HeroSection t={t} locale={locale} />
       <HowItWorksSection t={t} />
       <PricingSection t={t} />
+      <FaqSection t={t} />
+      <GuidesSection t={t} locale={locale} />
     </>
   );
 }
@@ -61,6 +64,19 @@ function HeroSection({ t, locale }: { t: Translator; locale: Locale }) {
             {t("landing.hero.secondaryCta")}
           </a>
         </div>
+        <ul
+          aria-label={t("landing.trust.label")}
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-600"
+        >
+          {TRUST_ITEMS.map((item) => (
+            <li key={item} className="flex items-center gap-1.5">
+              <span aria-hidden="true" className="font-bold text-emerald-600">
+                ✓
+              </span>
+              {t(`landing.trust.${item}`)}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
@@ -147,6 +163,48 @@ function PricingSection({ t }: { t: Translator }) {
           })}
         </div>
         <p className="mt-6 text-center text-sm text-slate-500">{t("landing.pricing.payWith")}</p>
+      </div>
+    </section>
+  );
+}
+
+// Answers are in the page HTML (closed <details> are still read by search and AI crawlers).
+function FaqSection({ t }: { t: Translator }) {
+  return (
+    <section id="faq" className="mx-auto max-w-3xl scroll-mt-16 px-4 py-16">
+      <SectionHeading t={t} titleKey="landing.faq.title" subtitleKey="landing.faq.subtitle" />
+      <div className="mt-10 space-y-3">
+        {FAQ_KEYS.map((key) => (
+          <details key={key} className="group rounded-2xl border border-slate-200 bg-white p-5">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h3 className="font-semibold text-slate-900">{t(`landing.faq.${key}.question`)}</h3>
+              <span aria-hidden="true" className="text-xl text-emerald-600 transition-transform group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <p className="mt-3 leading-7 text-slate-700">{t(`landing.faq.${key}.answer`)}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function GuidesSection({ t, locale }: { t: Translator; locale: Locale }) {
+  return (
+    <section className="border-t border-slate-200 bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-16">
+        <SectionHeading t={t} titleKey="landing.guides.title" subtitleKey="landing.guides.subtitle" />
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          {getGuides(locale).slice(0, HOME_GUIDE_COUNT).map((guide) => (
+            <GuideCard key={guide.slug} guide={guide} locale={locale} linkLabel={t("landing.guides.readGuide")} />
+          ))}
+        </div>
+        <p className="mt-8 text-center">
+          <Link href={localePath(locale, "/guides")} className="font-semibold text-emerald-700 hover:underline">
+            {t("landing.guides.allGuides")} →
+          </Link>
+        </p>
       </div>
     </section>
   );

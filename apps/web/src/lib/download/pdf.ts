@@ -70,6 +70,7 @@ export function createResumePdf(doc: ResumeDocument, title: string): { blob: Blo
     }
     for (const block of section.blocks) {
       write(block.text, SIZES.body, { indent: block.type === "bullet" ? BULLET_INDENT : 0 });
+      if (doc.paragraphGap) y += SIZES.body;
     }
   }
 

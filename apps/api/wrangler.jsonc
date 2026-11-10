@@ -16,7 +16,7 @@
 	// Deploys fail if any are missing, and the Worker refuses to serve if one is malformed (src/config.ts).
 	// CORS_ALLOWED_ORIGINS is not really secret, but managing it here gives clean per-environment
 	// values (localhost in .dev.vars, the Pages URL in production). Example production value:
-	//   https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev
+	//   https://buildora.pro.et,https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev
 	"secrets": {
 		"required": [
 			"DATABASE_URL",

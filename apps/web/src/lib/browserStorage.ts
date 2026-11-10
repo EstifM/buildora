@@ -26,8 +26,26 @@ const local = () => window.localStorage;
 // Email used to unlock downloads. Session only: forgotten when the tab closes.
 const UNLOCKED_EMAIL_KEY = "resume-builder:unlocked-email";
 
-export const readUnlockedEmail = () => read(session, UNLOCKED_EMAIL_KEY);
-export const storeUnlockedEmail = (email: string | null) => write(session, UNLOCKED_EMAIL_KEY, email);
+// Kept in memory too, so it still works when storage is blocked and so every download
+// panel on the page (resume, cover letter) unlocks at the same time.
+let unlockedEmail: string | null | undefined;
+const unlockListeners = new Set<() => void>();
+
+export function readUnlockedEmail(): string | null {
+  if (unlockedEmail === undefined) unlockedEmail = read(session, UNLOCKED_EMAIL_KEY);
+  return unlockedEmail;
+}
+
+export function storeUnlockedEmail(email: string | null) {
+  unlockedEmail = email;
+  write(session, UNLOCKED_EMAIL_KEY, email);
+  for (const listener of unlockListeners) listener();
+}
+
+export function subscribeUnlockedEmail(listener: () => void): () => void {
+  unlockListeners.add(listener);
+  return () => unlockListeners.delete(listener);
+}
 
 // The paying browser's secret token. Kept in localStorage so paid access survives
 // closing the tab; it only works for checking this payment's status.

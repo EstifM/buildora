@@ -7,14 +7,15 @@ const PREFIXES: Record<Locale, string> = { en: "", am: "/am" };
 export const LOCALE_STORAGE_KEY = "buildora:locale";
 
 // Pages that exist in every language. Others (e.g. /privacy, /terms) are English only.
-const LOCALIZED_PATHS = new Set(["/", "/builder"]);
+const LOCALIZED_PATHS = new Set(["/", "/builder", "/guides"]);
 
 function withoutLocalePrefix(pathname: string): string {
   return pathname.replace(/^\/am(?=\/|$)/, "").replace(/\/+$/, "") || "/";
 }
 
 export function isLocalizedPath(pathname: string): boolean {
-  return LOCALIZED_PATHS.has(withoutLocalePrefix(pathname));
+  const path = withoutLocalePrefix(pathname);
+  return LOCALIZED_PATHS.has(path) || path.startsWith("/guides/");
 }
 
 // For dates and numbers.

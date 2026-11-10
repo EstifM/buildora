@@ -14,7 +14,9 @@ import {
   isValidTransactionId,
   normalizeEmail,
   normalizeTransactionId,
+  type AiCoverLetterResponse,
   type AiRewriteResponse,
+  type AiStyle,
   type ApiErrorCode,
   type CreatePaymentResponse,
   type PaymentStatusResponse,
@@ -22,7 +24,8 @@ import {
 import { isOriginAllowed, type OriginRule } from "./config";
 import { TOKEN_RE, randomToken, safeEqual, sha256Hex } from "./lib/crypto";
 import { AI_DAILY_LIMIT, rewriteResume, type AiRunner } from "./ai/rewrite";
-import type { PaymentAttempt, PaymentRecord, PaymentRepository } from "./payments/repository";
+import { writeCoverLetter } from "./ai/coverLetter";
+import type { AiRequestKind, AiRequestLog, PaymentAttempt, PaymentRecord, PaymentRepository } from "./payments/repository";
 import { notifyAdmin } from "./telegram/bot";
 
 export interface AppDeps {
@@ -152,8 +155,9 @@ export function createApp(deps: AppDeps) {
       const rawEmail = typeof email === "string" ? email.slice(0, EMAIL_MAX_LENGTH) : undefined;
       const rawTxId = typeof transactionId === "string" ? transactionId.slice(0, TRANSACTION_ID_INPUT_MAX_LENGTH) : undefined;
       const rawPlan = typeof planId === "string" ? planId.slice(0, 20) : undefined;
-      const invalid = (code: ApiErrorCode) => {
-        void audit({ outcome: "invalid", email: rawEmail, transactionId: rawTxId, planId: rawPlan, ipHash });
+      // Awaited: a Worker may drop unfinished work once the response is sent.
+      const invalid = async (code: ApiErrorCode) => {
+        await audit({ outcome: "invalid", email: rawEmail, transactionId: rawTxId, planId: rawPlan, ipHash });
         return apiError(c, 400, code);
       };
 
@@ -213,76 +217,81 @@ export function createApp(deps: AppDeps) {
     return c.json(response);
   });
 
-  // Paid AI Builder: only for browsers whose payment is approved and not expired.
-  app.post(
-    "/ai/rewrite",
-    bodyLimit({ maxSize: MAX_AI_BODY_BYTES, onError: (c) => apiError(c, 413, "input_too_long") }),
-    async (c) => {
-      const auth = await authenticate(c, deps.aiLimiter);
-      if ("error" in auth) return auth.error;
-      const { payment } = auth;
-      if (!isAccessActive(payment)) return apiError(c, 402, "payment_required");
+  // Shared by both paid AI routes: access check, input validation, daily cap, usage log.
+  // Rewrites and cover letters count toward the same daily limit.
+  async function handleAi(c: Context, kind: AiRequestKind, allowStyle: boolean) {
+    const auth = await authenticate(c, deps.aiLimiter);
+    if ("error" in auth) return auth.error;
+    const { payment } = auth;
+    if (!isAccessActive(payment)) return apiError(c, 402, "payment_required");
 
-      const body = await c.req.json().catch(() => null);
-      if (!body || typeof body !== "object") return apiError(c, 400, "invalid_request");
-      const { resumeText, jobDescription, instructions, style } = body as Record<string, unknown>;
-      if (style !== undefined && !AI_STYLES.includes(style as (typeof AI_STYLES)[number])) {
-        return apiError(c, 400, "invalid_request");
-      }
-      if (typeof resumeText !== "string" || typeof jobDescription !== "string") {
-        return apiError(c, 400, "invalid_request");
-      }
-      if (instructions !== undefined && typeof instructions !== "string") return apiError(c, 400, "invalid_request");
-      if (!resumeText.trim() || !jobDescription.trim()) return apiError(c, 400, "invalid_request");
-      if (
-        resumeText.length > BUILDER_LIMITS.resumeMaxChars ||
-        jobDescription.length > BUILDER_LIMITS.jobDescriptionMaxChars ||
-        (instructions?.length ?? 0) > BUILDER_LIMITS.aiInstructionsMaxChars
-      ) {
-        return apiError(c, 413, "input_too_long");
-      }
+    const body = await c.req.json().catch(() => null);
+    if (!body || typeof body !== "object") return apiError(c, 400, "invalid_request");
+    const { resumeText, jobDescription, instructions, style } = body as Record<string, unknown>;
+    if (style !== undefined && (!allowStyle || !AI_STYLES.includes(style as AiStyle))) {
+      return apiError(c, 400, "invalid_request");
+    }
+    if (typeof resumeText !== "string" || typeof jobDescription !== "string") {
+      return apiError(c, 400, "invalid_request");
+    }
+    if (instructions !== undefined && typeof instructions !== "string") return apiError(c, 400, "invalid_request");
+    if (!resumeText.trim() || !jobDescription.trim()) return apiError(c, 400, "invalid_request");
+    if (
+      resumeText.length > BUILDER_LIMITS.resumeMaxChars ||
+      jobDescription.length > BUILDER_LIMITS.jobDescriptionMaxChars ||
+      (instructions?.length ?? 0) > BUILDER_LIMITS.aiInstructionsMaxChars
+    ) {
+      return apiError(c, 413, "input_too_long");
+    }
 
-      // Daily cap per paying user, so one account can't use up the shared Workers AI allowance.
-      const since = new Date(Date.now() - 24 * 60 * 60 * 1000);
-      if ((await deps.repo.countAiRequestsSince(payment.id, since)) >= AI_DAILY_LIMIT) {
-        return apiError(c, 429, "daily_limit");
-      }
+    // Daily cap per paying user, so one account can't use up the shared Workers AI allowance.
+    const since = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    if ((await deps.repo.countAiRequestsSince(payment.id, since)) >= AI_DAILY_LIMIT) {
+      return apiError(c, 429, "daily_limit");
+    }
 
-      const inputChars = resumeText.length + jobDescription.length + (instructions?.length ?? 0);
-      const log = async (entry: Omit<Parameters<PaymentRepository["logAiRequest"]>[0], "paymentId" | "inputChars">) => {
-        try {
-          await deps.repo.logAiRequest({ paymentId: payment.id, inputChars, ...entry });
-        } catch (error) {
-          console.error("Failed to write AI usage log", error);
-        }
-      };
-
-      let result;
+    const inputChars = resumeText.length + jobDescription.length + (instructions?.length ?? 0);
+    const log = async (entry: Omit<AiRequestLog, "paymentId" | "kind" | "inputChars">) => {
       try {
-        result = await rewriteResume(deps.ai, {
-          resumeText,
-          jobDescription,
-          instructions,
-          style: style as (typeof AI_STYLES)[number] | undefined,
-        });
+        await deps.repo.logAiRequest({ paymentId: payment.id, kind, inputChars, ...entry });
       } catch (error) {
-        // Never pass model/provider errors to the user.
-        console.error("Workers AI call failed", error);
-        await log({ outcome: "ai_error", outputChars: 0, truncated: false });
-        return apiError(c, 503, "ai_unavailable");
+        console.error("Failed to write AI usage log", error);
       }
+    };
 
-      const usage = { promptTokens: result.promptTokens, completionTokens: result.completionTokens };
-      if (!result.text) {
-        await log({ outcome: "empty_output", outputChars: 0, truncated: result.truncated, ...usage });
-        return apiError(c, 503, "ai_unavailable");
-      }
+    let result;
+    try {
+      result =
+        kind === "rewrite"
+          ? await rewriteResume(deps.ai, { resumeText, jobDescription, instructions, style: style as AiStyle | undefined })
+          : await writeCoverLetter(deps.ai, { resumeText, jobDescription, instructions });
+    } catch (error) {
+      // Never pass model/provider errors to the user.
+      console.error("Workers AI call failed", error);
+      await log({ outcome: "ai_error", outputChars: 0, truncated: false });
+      return apiError(c, 503, "ai_unavailable");
+    }
 
-      await log({ outcome: "success", outputChars: result.text.length, truncated: result.truncated, ...usage });
+    const usage = { promptTokens: result.promptTokens, completionTokens: result.completionTokens };
+    if (!result.text) {
+      await log({ outcome: "empty_output", outputChars: 0, truncated: result.truncated, ...usage });
+      return apiError(c, 503, "ai_unavailable");
+    }
+
+    await log({ outcome: "success", outputChars: result.text.length, truncated: result.truncated, ...usage });
+    if (kind === "rewrite") {
       const response: AiRewriteResponse = { improvedText: result.text, truncated: result.truncated };
       return c.json(response);
-    },
-  );
+    }
+    const response: AiCoverLetterResponse = { coverLetter: result.text, truncated: result.truncated };
+    return c.json(response);
+  }
+
+  // Paid AI Builder: only for browsers whose payment is approved and not expired.
+  const aiBodyLimit = bodyLimit({ maxSize: MAX_AI_BODY_BYTES, onError: (c) => apiError(c, 413, "input_too_long") });
+  app.post("/ai/rewrite", aiBodyLimit, (c) => handleAi(c, "rewrite", true));
+  // Cover letter for the same job, generated after the resume is built.
+  app.post("/ai/cover-letter", aiBodyLimit, (c) => handleAi(c, "cover_letter", false));
 
   // Telegram webhook. Check the secret ourselves first so unauthenticated requests
   // never reach grammY (which may call Telegram before its own check).

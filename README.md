@@ -5,10 +5,13 @@ Buildora tailors your resume to a job description so it gets past applicant trac
 ## Features
 
 - Free ATS keyword check with a before/after match score
-- Paid AI rewrite (Cloudflare Workers AI) with three writing styles
+- Paid AI rewrite (Cloudflare Workers AI) with three writing styles and a matching cover letter
+- Reads PDF, Word and text resumes in the browser (files are never uploaded)
 - Protected, watermarked preview and PDF/Word downloads after email unlock
 - Telebirr payments approved by the admin through a Telegram bot
-- English and Amharic (አማርኛ) interface, SEO-ready static site
+- English and Amharic (አማርኛ) interface, SEO-ready static site with guides, FAQ and `/llms.txt`
+
+Live site: https://buildora.pro.et
 
 ## Tech stack
 

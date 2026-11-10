@@ -13,6 +13,7 @@ import { AiStyleSelector } from "@/components/AiStyleSelector";
 import { FreeBuildResult } from "@/components/FreeBuildResult";
 import { PaymentDialog, formatAccessDate } from "@/components/PaymentDialog";
 import { recordLead } from "@/lib/api";
+import { readResumeFile } from "@/lib/readResumeFile";
 import { readUnlockedEmail } from "@/lib/browserStorage";
 import { useLocale, useT } from "@/components/LocaleProvider";
 import type { Translator } from "@/lib/i18n";
@@ -37,6 +38,9 @@ export function BuilderForm() {
   const [jobDescription, setJobDescription] = useState("");
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
+  const [readingFile, setReadingFile] = useState(false);
+  // Ignores a slow file read if the user has already picked or removed another file.
+  const fileReadId = useRef(0);
   const [showAiInstructions, setShowAiInstructions] = useState(false);
   const [aiInstructions, setAiInstructions] = useState("");
   const [aiStyle, setAiStyle] = useState<AiStyle>(DEFAULT_AI_STYLE);
@@ -54,12 +58,10 @@ export function BuilderForm() {
 
   const resumeTooLong = resumeText.length > BUILDER_LIMITS.resumeMaxChars;
   const jobTooLong = jobDescription.length > BUILDER_LIMITS.jobDescriptionMaxChars;
-  const hasResume = resumeFile !== null || resumeText.trim().length > 0;
+  const hasResume = resumeText.trim().length > 0;
   const hasJob = jobDescription.trim().length > 0;
-  const canBuild = hasResume && hasJob && !resumeTooLong && !jobTooLong && !fileError;
-  // The free algorithm needs pasted text; file reading comes later.
-  const hasPastedResume = resumeText.trim().length > 0;
-  const canBuildFree = canBuild && hasPastedResume;
+  const canBuild = hasResume && hasJob && !resumeTooLong && !jobTooLong && !readingFile;
+  const canBuildFree = canBuild;
   const aiInstructionsTooLong = aiInstructions.length > BUILDER_LIMITS.aiInstructionsMaxChars;
   const canBuildAi = canBuildFree && !aiInstructionsTooLong;
 
@@ -67,22 +69,45 @@ export function BuilderForm() {
     setBuiltMode(null);
   }
 
-  // Files stay in the browser for now. When uploads are stored on R2, they must be
-  // deleted automatically within FILE_RETENTION_HOURS (see packages/shared/src/storage.ts).
-  function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
-    resetResult();
-    const file = event.target.files?.[0];
+  // The file is read inside the browser and its text goes into the resume box, where the
+  // user can check and edit it. Nothing is uploaded. If uploads are ever stored on R2, they must
+  // be deleted automatically within FILE_RETENTION_HOURS (see packages/shared/src/storage.ts).
+  async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const input = event.target;
+    const file = input.files?.[0];
     if (!file) return;
+    resetResult();
+    const readId = ++fileReadId.current;
 
-    const error = validateResumeFile(file, t);
-    setFileError(error);
-    setResumeFile(error ? null : file);
-    if (error) event.target.value = "";
+    const invalid = validateResumeFile(file, t);
+    if (invalid) {
+      setFileError(invalid);
+      setResumeFile(null);
+      input.value = "";
+      return;
+    }
+
+    setFileError(null);
+    setResumeFile(file);
+    setReadingFile(true);
+    const result = await readResumeFile(file);
+    if (readId !== fileReadId.current) return;
+    setReadingFile(false);
+
+    if (result.ok) {
+      setResumeText(result.text);
+    } else {
+      setFileError(t(result.error === "noText" ? "builder.errors.fileNoText" : "builder.errors.fileUnreadable"));
+      setResumeFile(null);
+      input.value = "";
+    }
   }
 
   function removeFile() {
+    fileReadId.current++;
     resetResult();
     setResumeFile(null);
+    setReadingFile(false);
     setFileError(null);
     if (fileInputRef.current) fileInputRef.current.value = "";
   }
@@ -143,9 +168,11 @@ export function BuilderForm() {
                   />
                 </label>
                 {resumeFile && (
-                  <span className="flex min-w-0 items-center gap-2 text-sm text-slate-700">
+                  <span role="status" className="flex min-w-0 items-center gap-2 text-sm text-slate-700">
                     <span className="truncate">
-                      {t("builder.resume.selectedFile", { fileName: resumeFile.name })}
+                      {readingFile
+                        ? t("builder.resume.reading", { fileName: resumeFile.name })
+                        : t("builder.resume.selectedFile", { fileName: resumeFile.name })}
                     </span>
                     <button
                       type="button"
@@ -157,6 +184,7 @@ export function BuilderForm() {
                   </span>
                 )}
               </div>
+              <p className="mt-2 text-xs text-slate-500">{t("builder.resume.privacyNote")}</p>
               {fileError && (
                 <p role="alert" className="mt-2 text-sm text-red-600">
                   {fileError}
@@ -256,9 +284,6 @@ export function BuilderForm() {
             )}
           </div>
           {!canBuild && <p className="text-sm text-slate-500">{t("builder.buildHint")}</p>}
-          {canBuild && !hasPastedResume && (
-            <p className="text-center text-sm text-slate-500">{t("builder.pasteTextForFree")}</p>
-          )}
         </div>
 
       </form>

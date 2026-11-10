@@ -233,3 +233,55 @@ describe("AI daily limit", () => {
     expect((await rewrite(env, token, { resumeText, jobDescription })).status).toBe(200);
   });
 });
+
+describe("POST /ai/cover-letter", () => {
+  const coverLetter = (env: ReturnType<typeof setup>, token: string | null, body: unknown) =>
+    env.app.request("/ai/cover-letter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: ORIGIN, ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+      body: JSON.stringify(body),
+    });
+
+  it("writes a cover letter for a paid user and logs it as its own kind", async () => {
+    const env = setup({ aiReply: chatReply("Dear Hiring Manager,\n\nI am applying for the Senior Accountant role.\n\nSincerely,\nAbebe Kebede") });
+    const token = await paidUser(env);
+    const res = await coverLetter(env, token, { resumeText, jobDescription });
+
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({
+      coverLetter: "Dear Hiring Manager,\n\nI am applying for the Senior Accountant role.\n\nSincerely,\nAbebe Kebede",
+      truncated: false,
+    });
+    const [call] = env.aiCalls;
+    expect(call.model).toBe(AI_MODEL);
+    expect(call.input.max_tokens).toBeLessThanOrEqual(AI_MAX_TOKENS);
+    const [system, user] = call.input.messages as { role: string; content: string }[];
+    expect(system.content).toContain("cover letter");
+    expect(user.content).toContain("<resume>\nAbebe Kebede");
+    expect(env.repo.aiRequests).toEqual([expect.objectContaining({ kind: "cover_letter", outcome: "success" })]);
+    expect(JSON.stringify(env.repo.aiRequests)).not.toContain("Abebe");
+  });
+
+  it("requires active paid access and rejects a style", async () => {
+    const env = setup();
+    expect((await coverLetter(env, null, { resumeText, jobDescription })).status).toBe(401);
+    const pendingToken = await paidUser(env, false);
+    expect((await coverLetter(env, pendingToken, { resumeText, jobDescription })).status).toBe(402);
+    const token = await paidUser(env);
+    expect((await coverLetter(env, token, { resumeText, jobDescription, style: "natural" })).status).toBe(400);
+    expect((await coverLetter(env, token, { resumeText: " ", jobDescription })).status).toBe(400);
+    expect(env.aiCalls).toHaveLength(0);
+  });
+
+  it("shares the daily limit with rewrites", async () => {
+    const env = setup();
+    const token = await paidUser(env);
+    const paymentId = env.repo.payments[0].id;
+    for (let i = 0; i < 20; i++) {
+      await env.repo.logAiRequest({ paymentId, kind: "rewrite", outcome: "success", inputChars: 1, outputChars: 1, truncated: false });
+    }
+    const res = await coverLetter(env, token, { resumeText, jobDescription });
+    expect(res.status).toBe(429);
+    expect(await res.json()).toEqual({ error: "daily_limit" });
+  });
+});

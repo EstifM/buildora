@@ -5,8 +5,8 @@ Step-by-step setup details: [payments-setup.md](payments-setup.md) and [ai-build
 ## Manual steps
 
 ### Database (Neon)
-- [ ] Run the migrations in order in the Neon SQL editor: `0001_payments.sql`, `0002_ai_requests.sql`, `0003_leads.sql`
-      (all safe to re-run).
+- [ ] Run the migrations in order in the Neon SQL editor: `0001_payments.sql`, `0002_ai_requests.sql`, `0003_leads.sql`,
+      `0004_ai_request_kind.sql` (all safe to re-run). Run `0004` before deploying the API with cover letters.
 - [ ] Recommended: connect the API with a database role that has only `SELECT`, `INSERT`, `UPDATE` on these tables
       (no `DELETE`/`TRUNCATE`/DDL). Triggers already block deleting payments, but least privilege limits damage if
       `DATABASE_URL` ever leaks.
@@ -15,8 +15,8 @@ Step-by-step setup details: [payments-setup.md](payments-setup.md) and [ai-build
 - [ ] `npx wrangler secret put` each of: `DATABASE_URL`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET`
       (16–256 chars of `A-Z a-z 0-9 _ -`), `TELEGRAM_ADMIN_CHAT_ID` (numeric), `IP_HASH_SALT` (16+ chars),
       `CORS_ALLOWED_ORIGINS`.
-- [ ] `CORS_ALLOWED_ORIGINS` = `https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev`
-      (+ your custom domain later). This replaces the old `ALLOWED_ORIGINS` variable.
+- [ ] `CORS_ALLOWED_ORIGINS` = `https://buildora.pro.et,https://resume-builder-ethiopia.pages.dev,https://*.resume-builder-ethiopia.pages.dev`.
+      Without the first entry, payments and the AI Builder fail on `buildora.pro.et`.
 - [ ] Deploy: `npm run deploy --workspace=apps/api`.
 - [ ] Check: `curl https://resume-builder-api.makler202.workers.dev/payments/status` returns **401**.
       A **503** means a setting is missing or malformed — the Worker logs name which one (never the value).
@@ -29,13 +29,19 @@ Step-by-step setup details: [payments-setup.md](payments-setup.md) and [ai-build
 ### Website (Cloudflare Pages)
 - [ ] Build command `npm run build --workspace=apps/web`, output directory `apps/web/out`.
 - [ ] Environment variables: `NEXT_PUBLIC_API_URL` = the Worker URL;
-      `NEXT_PUBLIC_SITE_URL` = the **stable** address (`https://resume-builder-ethiopia.pages.dev` or your domain).
-      Your local `.env.local` currently points at a single deployment (`https://f897bdec…pages.dev`).
+      `NEXT_PUBLIC_SITE_URL` = `https://buildora.pro.et`.
+- [ ] Redirect `resume-builder-ethiopia.pages.dev` to `https://buildora.pro.et` (Cloudflare dashboard → Bulk Redirects,
+      keep the path) so only one address is indexed.
 - [ ] After deploying, check the response headers of the home page include `Content-Security-Policy`,
-      and that `/robots.txt` and `/sitemap.xml` show the stable address.
+      and that `/robots.txt`, `/sitemap.xml` and `/llms.txt` show `https://buildora.pro.et`.
+- [ ] Google Search Console: add the `buildora.pro.et` property, submit `https://buildora.pro.et/sitemap.xml`, and
+      request indexing for the home page and `/guides`. Do the same in Bing Webmaster Tools.
 
 ### Smoke test in production
+- [ ] Choose a PDF and a DOCX resume → the text appears in the resume box.
 - [ ] Free Build → unlock download → PDF and DOCX download.
+- [ ] AI build → Generate cover letter → PDF and DOCX download.
+- [ ] Open a made-up address (e.g. `/nope`) → the 404 score card appears.
 - [ ] Payment popup → test transaction → Approve in Telegram → site updates by itself → AI build works.
 - [ ] Reuse the same transaction number → "already used" error.
 - [ ] Switch to አማርኛ and back.

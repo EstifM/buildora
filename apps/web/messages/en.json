@@ -14,7 +14,10 @@
       "description": "Paste your resume and a job description to get an ATS match score, the missing keywords and an improved resume in seconds. Free to try."
     },
     "ogImageAlt": "Buildora logo",
-    "offerFree": "Free keyword check and ATS score"
+    "offerFree": "Free keyword check and ATS score",
+    "notFound": {
+      "title": "Page not found (404) | Buildora"
+    }
   },
   "language": {
     "switcherLabel": "Choose language",
@@ -24,13 +27,14 @@
   "nav": {
     "home": "Home",
     "builder": "Builder",
-    "mainLabel": "Main navigation"
+    "mainLabel": "Main navigation",
+    "guides": "Guides"
   },
   "landing": {
     "hero": {
       "badge": "Free to try",
       "title": "Get your resume past the ATS and in front of a recruiter",
-      "description": "Upload your resume, paste the job description, and we'll tailor it with the right keywords. See your improvement score instantly.",
+      "description": "Upload your resume or paste the text, add the job description, and we'll tailor it with the right keywords. See your improvement score instantly.",
       "cta": "Start Building",
       "secondaryCta": "See pricing"
     },
@@ -78,7 +82,45 @@
       "privacy": "Your resume is only used to build your result.",
       "privacyLink": "Privacy Policy",
       "termsLink": "Terms of Service",
-      "legalNav": "Legal"
+      "legalNav": "Legal",
+      "guidesLink": "Guides"
+    },
+    "trust": {
+      "label": "Why people use Buildora",
+      "item1": "Free keyword check and score",
+      "item2": "Files are read on your device",
+      "item3": "Pay with Telebirr",
+      "item4": "English and አማርኛ"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Short answers before you start.",
+      "q1": {
+        "question": "Is Buildora free?",
+        "answer": "Yes. Free Build checks your resume against the job post, shows your ATS match score, adds missing keywords and lets you download the result as PDF or Word after you enter your email. The AI rewrite and the cover letter are paid: 50 birr for 1 day or 200 birr for 7 days."
+      },
+      "q2": {
+        "question": "What is an ATS?",
+        "answer": "An applicant tracking system (ATS) is software employers use to collect and sort job applications. It reads your resume as plain text and lets recruiters search and filter by the skills and words in the job post. A resume that uses those words, in a simple layout, is easier to find."
+      },
+      "q3": {
+        "question": "How do I pay with Telebirr?",
+        "answer": "Choose the 1-day or 7-day plan, send the exact amount with Telebirr to the number shown in the payment window, then enter the transaction number from your receipt. We check each payment by hand, usually within a few minutes, and your access starts when it is approved. Each transaction number works only once."
+      },
+      "q4": {
+        "question": "Is my resume stored?",
+        "answer": "No. Free Build and file reading run inside your browser, so your file never leaves your device. If you use the paid AI Builder, your text is sent to our server only to create your result and is not kept afterwards. PDF and Word files are created on your device."
+      },
+      "q5": {
+        "question": "Will the AI add experience I do not have?",
+        "answer": "It is told not to. The AI rewrites your resume and cover letter using only facts from your original resume, in the wording of the job post. AI can still make mistakes, so read the result before you send it, and remove any suggested skill you do not really have."
+      }
+    },
+    "guides": {
+      "title": "Guides for job seekers in Ethiopia",
+      "subtitle": "Practical advice on ATS keywords, CV format and tailoring your resume.",
+      "readGuide": "Read the guide",
+      "allGuides": "See all guides"
     }
   },
   "builder": {
@@ -94,7 +136,9 @@
       "selectedFile": "Selected: {fileName}",
       "orPaste": "or paste the text",
       "pasteLabel": "Resume text",
-      "pastePlaceholder": "Paste your resume here…"
+      "pastePlaceholder": "Paste your resume here…",
+      "reading": "Reading {fileName}…",
+      "privacyNote": "Your file is read on your device and is not uploaded. Check the text below after it loads."
     },
     "jobDescription": {
       "heading": "Job description",
@@ -110,7 +154,6 @@
       "aiBadge": "Premium"
     },
     "buildHint": "Add your resume and a job description to continue.",
-    "pasteTextForFree": "File reading is coming soon. Please paste your resume text to build.",
     "aiInstructions": {
       "label": "Extra instructions for the AI (optional)",
       "placeholder": "Focus more on leadership experience, make the summary more confident, etc.",
@@ -127,7 +170,9 @@
     "errors": {
       "fileType": "Please choose a PDF, DOCX or TXT file.",
       "fileTooLarge": "This file is too large. The limit is {maxMb} MB.",
-      "tooLong": "This text is too long. Please keep it under {max} characters."
+      "tooLong": "This text is too long. Please keep it under {max} characters.",
+      "fileUnreadable": "We couldn't read this file. Try another file, or paste your resume text below.",
+      "fileNoText": "We found no text in this file. It may be a scanned image. Please paste your resume text below."
     },
     "score": {
       "title": "ATS match score",
@@ -197,6 +242,19 @@
       "chatgpt": "ChatGPT style: natural and conversational",
       "claude": "Claude style: structured, professional and detailed",
       "gemini": "Gemini style: concise and keyword-focused"
+    },
+    "coverLetter": {
+      "title": "Cover letter for this job",
+      "hint": "Get a matching cover letter written from your finished resume. It counts as one of your daily AI requests.",
+      "generate": "Generate cover letter",
+      "regenerate": "Write it again",
+      "loading": "Writing your cover letter…",
+      "honestyNote": "The letter only uses facts from your resume. Read it carefully and add the company address or contact name if you have them.",
+      "truncated": "The letter may be cut short at the end. Check the closing before you use it.",
+      "errorTitle": "The cover letter couldn't be written",
+      "downloadTitle": "Download your cover letter",
+      "fileName": "cover-letter",
+      "documentTitle": "{name} – Cover Letter"
     }
   },
   "atsTemplates": {
@@ -259,5 +317,18 @@
       "daily_limit": "You've reached today's AI Builder limit. Please try again tomorrow, or use Free Build."
     },
     "emailNotice": "We save your email to confirm your payment and contact you about your resume."
+  },
+  "notFound": {
+    "scoreLabel": "ATS match score",
+    "outOf": "out of 100",
+    "scoreAlt": "404",
+    "title": "This page didn't pass the screening",
+    "description": "We searched every keyword and still couldn't find the page you asked for. The link may be old or mistyped.",
+    "missingTitle": "Missing keywords",
+    "missing1": "this page",
+    "missing2": "that link",
+    "missing3": "a typo, maybe",
+    "home": "Back to home",
+    "builder": "Build my resume"
   }
 }

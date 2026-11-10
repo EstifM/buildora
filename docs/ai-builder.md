@@ -5,6 +5,10 @@ The AI Builder rewrites a resume for a job description using Cloudflare Workers 
 - Model: `@cf/qwen/qwen3-30b-a3b-fp8` (set in [`apps/api/src/ai/rewrite.ts`](../apps/api/src/ai/rewrite.ts))
 - `max_tokens: 1500`, `temperature: 0.3`, thinking turned off with Qwen3's `/no_think` switch
 - Endpoint: `POST /ai/rewrite` on the API Worker, only for browsers with an approved, unexpired payment
+- Cover letter: `POST /ai/cover-letter` (same access rules; prompt in [`apps/api/src/ai/coverLetter.ts`](../apps/api/src/ai/coverLetter.ts),
+  700 output tokens). It is offered after the resume is built and is written from the finished resume. Rewrites and
+  cover letters share the rate limit and the daily cap; `ai_requests.kind` records which one each request was
+  (migration `0004_ai_request_kind.sql`).
   (same secret token as the payment status check)
 - Rate limit: 5 rewrites per minute per paying user (`AI_LIMITER`)
 

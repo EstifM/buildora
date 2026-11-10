@@ -1,18 +1,27 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
-import { EMAIL_MAX_LENGTH, isValidEmail, normalizeEmail, toResumeDocument } from "@resume-builder/shared";
-import { readUnlockedEmail, storeUnlockedEmail } from "@/lib/browserStorage";
+import { useId, useState, useSyncExternalStore, type FormEvent } from "react";
+import { EMAIL_MAX_LENGTH, isValidEmail, normalizeEmail, toLetterDocument, toResumeDocument } from "@resume-builder/shared";
+import { readUnlockedEmail, storeUnlockedEmail, subscribeUnlockedEmail } from "@/lib/browserStorage";
 import { recordLead } from "@/lib/api";
 import { buildFileName, saveFile } from "@/lib/download/save";
 import { useT } from "@/components/LocaleProvider";
 
 type Format = "pdf" | "docx";
 
-export function DownloadPanel({ resumeText }: { resumeText: string }) {
+export function DownloadPanel({
+  resumeText,
+  coverLetter,
+}: {
+  resumeText: string;
+  // When set, this panel downloads the cover letter instead of the resume.
+  coverLetter?: string;
+}) {
   const t = useT();
-  // This component only renders after a build (client-side), so reading storage here is safe.
-  const [unlockedEmail, setUnlockedEmail] = useState<string | null>(readUnlockedEmail);
+  const emailId = useId();
+  const isLetter = coverLetter !== undefined;
+  // Shared by every download panel on the page. Panels only render after a build (client-side).
+  const unlockedEmail = useSyncExternalStore(subscribeUnlockedEmail, readUnlockedEmail, () => null);
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState<string | null>(null);
   const [busy, setBusy] = useState<Format | null>(null);
@@ -30,13 +39,11 @@ export function DownloadPanel({ resumeText }: { resumeText: string }) {
     }
     const normalized = normalizeEmail(email);
     setEmailError(null);
-    setUnlockedEmail(normalized);
     storeUnlockedEmail(normalized);
     recordLead(normalized, "download_unlock");
   }
 
   function handleChangeEmail() {
-    setUnlockedEmail(null);
     storeUnlockedEmail(null);
   }
 
@@ -45,9 +52,13 @@ export function DownloadPanel({ resumeText }: { resumeText: string }) {
     setBusy(format);
     setDownloadError(false);
     try {
-      const doc = toResumeDocument(resumeText);
-      const title = doc.name ? t("builder.download.documentTitle", { name: doc.name }) : t("builder.download.fileName");
-      const fileName = buildFileName(doc.name, t("builder.download.fileName"), format);
+      // The person's name comes from the resume in both cases (used in the file name and title).
+      const { name } = toResumeDocument(resumeText);
+      const doc = isLetter ? toLetterDocument(coverLetter) : toResumeDocument(resumeText);
+      const titleKey = isLetter ? "builder.coverLetter.documentTitle" : "builder.download.documentTitle";
+      const suffix = t(isLetter ? "builder.coverLetter.fileName" : "builder.download.fileName");
+      const title = name ? t(titleKey, { name }) : suffix;
+      const fileName = buildFileName(name, suffix, format);
 
       // The libraries are loaded only when needed to keep the page fast.
       if (format === "pdf") {
@@ -71,17 +82,19 @@ export function DownloadPanel({ resumeText }: { resumeText: string }) {
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
-      <h3 className="font-semibold text-slate-900">{t("builder.download.title")}</h3>
+      <h3 className="font-semibold text-slate-900">
+        {t(isLetter ? "builder.coverLetter.downloadTitle" : "builder.download.title")}
+      </h3>
 
       {isLocked ? (
         <form onSubmit={handleUnlock} noValidate className="mt-3">
           <p className="text-sm text-slate-600">{t("builder.download.lockedHint")}</p>
-          <label htmlFor="unlock-email" className="sr-only">
+          <label htmlFor={emailId} className="sr-only">
             {t("builder.download.emailLabel")}
           </label>
           <div className="mt-3 flex flex-col gap-2 sm:flex-row">
             <input
-              id="unlock-email"
+              id={emailId}
               type="email"
               inputMode="email"
               autoComplete="email"
@@ -90,7 +103,7 @@ export function DownloadPanel({ resumeText }: { resumeText: string }) {
               value={email}
               placeholder={t("builder.download.emailPlaceholder")}
               aria-invalid={emailError !== null}
-              aria-describedby={emailError ? "unlock-email-error" : undefined}
+              aria-describedby={emailError ? `${emailId}-error` : undefined}
               onChange={(event) => {
                 setEmail(event.target.value);
                 setEmailError(null);
@@ -106,7 +119,7 @@ export function DownloadPanel({ resumeText }: { resumeText: string }) {
           </div>
           <p className="mt-2 text-xs text-slate-500">{t("builder.download.emailNotice")}</p>
           {emailError && (
-            <p id="unlock-email-error" role="alert" className="mt-2 text-sm text-red-600">
+            <p id={`${emailId}-error`} role="alert" className="mt-2 text-sm text-red-600">
               {emailError}
             </p>
           )}

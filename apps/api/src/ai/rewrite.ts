@@ -28,10 +28,15 @@ interface ChatCompletion {
   usage?: { prompt_tokens?: number; completion_tokens?: number };
 }
 
-export async function rewriteResume(ai: AiRunner, input: AiRewriteRequest): Promise<RewriteResult> {
+// One chat call to the model, returning cleaned plain text plus usage numbers.
+export async function runChat(
+  ai: AiRunner,
+  messages: { role: string; content: string }[],
+  maxTokens: number,
+): Promise<RewriteResult> {
   const output = (await ai.run(AI_MODEL, {
-    messages: buildMessages(input),
-    max_tokens: AI_MAX_TOKENS,
+    messages,
+    max_tokens: maxTokens,
     temperature: AI_TEMPERATURE,
   })) as ChatCompletion | string;
 
@@ -42,7 +47,7 @@ export async function rewriteResume(ai: AiRunner, input: AiRewriteRequest): Prom
   const raw = choice?.message?.content ?? completion.response ?? "";
 
   // We ask for no reasoning (/no_think). If the model reasons anyway, it eats the token budget
-  // and the resume can be cut short, so make it visible in the Worker logs.
+  // and the answer can be cut short, so make it visible in the Worker logs.
   const reasoning = choice?.message?.reasoning_content ?? raw.match(/<think>([\s\S]*?)(<\/think>|$)/)?.[1] ?? "";
   if (reasoning.trim()) {
     console.warn(`AI returned ${reasoning.length} characters of reasoning despite /no_think`, {
@@ -57,4 +62,8 @@ export async function rewriteResume(ai: AiRunner, input: AiRewriteRequest): Prom
     promptTokens: completion.usage?.prompt_tokens,
     completionTokens: completion.usage?.completion_tokens,
   };
+}
+
+export function rewriteResume(ai: AiRunner, input: AiRewriteRequest): Promise<RewriteResult> {
+  return runChat(ai, buildMessages(input), AI_MAX_TOKENS);
 }

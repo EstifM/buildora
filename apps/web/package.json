@@ -13,7 +13,9 @@
     "@resume-builder/shared": "*",
     "docx": "^9.8.1",
     "jspdf": "^4.2.1",
+    "mammoth": "^1.13.0",
     "next": "16.3.8",
+    "pdfjs-dist": "^6.5.438",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },

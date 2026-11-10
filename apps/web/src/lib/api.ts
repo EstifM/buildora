@@ -1,5 +1,7 @@
 import type {
   CreateLeadRequest,
+  AiCoverLetterRequest,
+  AiCoverLetterResponse,
   AiRewriteRequest,
   AiRewriteResponse,
   ApiErrorCode,
@@ -38,6 +40,15 @@ export function createPayment(input: CreatePaymentRequest) {
 
 export function aiRewrite(accessToken: string, input: AiRewriteRequest, signal?: AbortSignal) {
   return request<AiRewriteResponse>("/ai/rewrite", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
+    body: JSON.stringify(input),
+    signal,
+  });
+}
+
+export function aiCoverLetter(accessToken: string, input: AiCoverLetterRequest, signal?: AbortSignal) {
+  return request<AiCoverLetterResponse>("/ai/cover-letter", {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${accessToken}` },
     body: JSON.stringify(input),

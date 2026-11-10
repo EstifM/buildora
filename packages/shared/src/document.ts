@@ -22,6 +22,24 @@ export interface ResumeDocument {
   // Anything else before the first heading.
   intro: ResumeBlock[];
   sections: ResumeDocumentSection[];
+  // Letters: leave a blank line between paragraphs.
+  paragraphGap?: boolean;
+}
+
+// A cover letter is just paragraphs: no name block, headings or bullets.
+export function toLetterDocument(text: string): ResumeDocument {
+  const paragraphs = text
+    .replace(/\r\n?/g, "\n")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  return {
+    name: "",
+    contactLines: [],
+    intro: paragraphs.map((paragraph) => ({ type: "paragraph", text: paragraph })),
+    sections: [],
+    paragraphGap: true,
+  };
 }
 
 function toBlocks(lines: readonly string[]): ResumeBlock[] {
